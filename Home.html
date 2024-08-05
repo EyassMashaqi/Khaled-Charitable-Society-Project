@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Khaled Charitable Society for Severe Disability</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="proj.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
+</head>
+<body>
+  <header class="header">
+    <a href="#" class="logo">Khaled Charitable Society</a>
+    <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
+    <nav class="navbar" dir="rtl">
+        
+        <a href="Home.html" class="active">الصفحة الرئيسية</a>
+        <a href="Aboutus.html">من نحن</a>
+        <a href="ourGoals.html">الخدمات و الأهداف</a>
+        <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
+        <a href="contactus.html">طرق التواصل</a>
+        <div class="dropdown" dir="ltr">
+          <button class="dropbtn">EN/AR</button>
+          <div class="dropdown-content">
+              <a href="HomeEng.html">English</a>
+              <a href="Home.html">العربية</a>
+          </div>
+      </div>
+    </nav>
+</header>
+    <section class="home" dir="rtl">
+        <div class="home-content">
+            <h1>جمعية خالد للإعاقة الشديدة</h1>
+            <p>جمعية خالد الخيرية هي جمعية أهلية غير ربحية تعنى بالأشخاص ذوي الإعاقة المتوسطة والشديدة لعمر ال16 سنة فما فوق، وتعمل على تقديم خدمات التأهيل والرعاية والترفيه والدمج وتمكنهم من الحصول على حقوقهم كاملة حيث أن هذه الفئة من الإعاقة مهمشة بشكل كامل ولا توجد مؤسسات تقدم لهم الخدمات والرعاية المطلوبة. تأسست الجمعية بتاريخ 2022-12-8 في محافظة رام الله والبيرة تحت رقم RA-22220018-C</p>
+            <div class="btn-box">
+                <a href="Aboutus.html">من نحن</a>
+                <a href="contactus.html">طرق التواصل</a>
+            </div>
+        </div>
+        <div class="home-sci">
+            <a href="https://www.facebook.com/KCSSDisability"><i class='bx bxl-facebook'></i></a>
+            <a href="https://www.google.com/maps/dir//31.9035765,35.1923324/@31.9038276,35.192327,20z/data=!4m2!4m1!3e0?entry=ttu"><i class='bx bx-current-location'></i></a>
+            <a href="https://www.instagram.com/khaled.cssd?igsh=bXl0YW02MmpucGxu"><i class='bx bxl-instagram'></i></a>
+        </div>
+        <span class="home-imgHover"></span>   
+    </section>
+
+    <script>
+        // JavaScript for toggle button
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

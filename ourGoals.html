@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>الخدمات و الأهداف</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="proj.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .about {
+            padding: 50px 10%;
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: #ededed;
+            margin-bottom: 20px;
+        }
+
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .service-box {
+            background: #fff;
+            color: #081b29;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .service-box h4 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .service-box p {
+            font-size: 16px;
+        }
+
+        /* Base styles for header and navbar */
+        .header {
+            position: relative;
+            width: 100%;
+            padding: 20px 10%;
+            background: #081b29;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ededed;
+            text-decoration: none;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #00abf0;
+        }
+
+        /* Toggle Button for Mobile */
+        .toggle-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #ededed;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+        }
+
+        /* Responsive adjustments */
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 15px 5%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                display: none; /* Hide navbar items initially */
+                flex-direction: column;
+                width: 100%;
+                background-color: #081b29;
+                position: absolute;
+                top: 60px; /* Adjust based on header height */
+                left: 0;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                z-index: 100;
+            }
+
+            .navbar.active {
+                display: flex; /* Show navbar items when active */
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .toggle-btn {
+                display: block; /* Show toggle button on mobile */
+            }
+
+            .dropdown {
+                display: block;
+                width: 100%;
+            }
+
+            .dropdown .bx {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                display: none;
+                flex-direction: column;
+                background-color: #081b29;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+                color: #ededed;
+                text-decoration: none;
+                padding: 12px 16px;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #00abf0;
+            }
+
+            .dropdown-content.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Khaled Charitable Society</a>
+        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="navbar" dir="rtl">
+            <a href="Home.html">الصفحة الرئيسية</a>
+            <a href="Aboutus.html">من نحن</a>
+            <a href="ourGoals.html" class="active">الخدمات و الأهداف</a>
+            <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
+            <a href="contactus.html">طرق التواصل</a>
+        </nav>
+    </header>
+
+    <section class="about" dir="rtl">
+        <div class="container1">
+            <div class="row">
+                <!-- الخدمات -->
+                <div class="col-md-12">
+                    <h3 class="card-title">خدماتنا</h3>
+                    <div class="services">
+                        <div class="service-box">
+                            <h4>العلاج الطبيعي</h4>
+                            <p>توفير جلسات العلاج الطبيعي بشكل منتظم عن طريق تقييم الحالات وتحديد نقاط القوة والضعف ووضع خطة مناسبة لكل حالة بهدف الحفاظ على قدراتهم وتنميتها.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>العلاج الوظيفي</h4>
+                            <p>توفير خدمات العلاج الوظيفي بشكل منتظم من خلال تحسين الأساليب والمعدات للعمل على تحسين قدراتهم في أداء أنشطة الحياة اليومية وتطوير مهاراتهم.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>الرعاية الشاملة</h4>
+                            <p>تقديم الرعاية الصحية والنظافة والعناية وغيرها من الاحتياجات.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>الترفيه</h4>
+                            <p>العمل على توفير برامج ترفيهية متنوعة وملائمة من أجل تعزيز إنتمائهم ومشاركتهم الإجتماعية، وجعلهم يشعرون بالسعادة والتواصل مع الآخرين.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- الخدمات -->
+
+                <!-- أهداف الجمعية -->
+                <div class="col-md-12">
+                    <h3 class="card-title">أهداف الجمعية</h3>
+                    <div class="services">
+                        <div class="service-box">
+                            <h4>توفير الرعاية الشاملة</h4>
+                            <p>توفير الرعاية الشاملة من خلال تقديم خدمات التأهيل والرعاية والدمج للاشخاص ذوي الاعاقة.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>إنشاء مرفق معاصر</h4>
+                            <p>إنشاء مرفق معاصر ومجهز بالكامل يمكن الوصول إليه بسهولة وتصميمه خصيصا لمتطلبات الفريدة للاشخاص ذوي الاعاقة.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>إنشاء قنوات تواصل</h4>
+                            <p>إنشاء قنوات تواصل مع المؤسسات الحكومية والمجتمع المدني وقطاع الأعمال لتقديم أفضل خدمة ممكنة.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>تلبية احتياجات الأفراد</h4>
+                            <p>تلبية احتياجات الأفراد الذين يعانون من الإعاقات المتوسطة والشديدة باعتبارهم المستفيدين الأساسيين من خدماتنا وتمكينهم من تلبية احتياجاتهم.</p>
+                        </div>
+                        <div class="service-box">
+                            <h4>الدفاع عن حقوق ذوي الاعاقة</h4>
+                            <p>الدفاع عن حقوق ذوي الاعاقة وتفعيل دورهم في المجتمع، وتعريفهم بحقوقهم وواجباتهم وسبل العمل مع بقية المجتمع.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- أهداف الجمعية -->
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for toggle button
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+
+        // JavaScript for dropdown menu
+        document.querySelector('.bx-menu').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

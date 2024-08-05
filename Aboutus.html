@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Khaled Charitable Society for Severe Disability</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="proj.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            margin-top: 50px;
+        }
+
+        .about {
+            height: auto;
+            padding: 50px 10%;
+        }
+
+        .about-text {
+            font-size: medium;
+        }
+
+        .services {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .service-box {
+            background: #fff;
+            color: #081b29;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        .card-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #081b29;
+        }
+
+        .list-unstyled li {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+
+        .glyphicon {
+            color: #00abf0;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Khaled Charitable Society</a>
+        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="navbar" dir="rtl">
+            <a href="Home.html">الصفحة الرئيسية</a>
+            <a href="Aboutus.html" class="active">من نحن</a>
+            <a href="ourGoals.html">الخدمات و الأهداف</a>
+            <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
+            <a href="contactus.html">طرق التواصل</a>
+        </nav>
+    </header>
+    <section class="about" dir="rtl">
+        <div class="container">
+            <div class="services">
+                <div class="service-box">
+                    <h3 class="card-title">من نحن</h3>
+                    <p class="about-text">جمعية خالد الخيرية هي جمعية أهلية غير
+                        ربحية تعنى بالأشخاص ذوي الإعاقة
+                        المتوسطة والشديدة لعمر 16 سنة فما
+                        فوق، وتعمل على تقديم خدمات التأهيل
+                        والرعاية والترفيه والدمج وتمكنهم من
+                        الحصول على حقوقهم كاملة حيث أن
+                        هذه الفئة من الإعاقة مهمشة بشكل
+                        كامل ولا توجد مؤسسات تقدم لهم
+                        الخدمات والرعاية المطلوبة.
+                        تأسست الجمعية بتاريخ 2022-12-8 في
+                        محافظة رام الله والبيرة تحت رقم
+                        RA-22220018-C</p>
+                        <h3 class="card-title">الفئة المستهدفة</h3>
+                        <p class="about-text">تقدم الجمعية خدماتها للأشخاص ذوي الإعاقة الشديدة لأعمار 16 سنة فما فوق.</p>
+                        <h3 class="card-title">الرؤية</h3>
+                        <p class="about-text">العمل على تقديم خدمة على مستوى عالٍ وتأهيل ودمج الأشخاص ذوي الإعاقة الشديدة في فلسطين وتمكينهم من التمتع بحياة كريمة.</p>
+                    </div>
+                    <div class="service-box">
+                        <h3 class="card-title">الرسالة</h3>
+                        <p class="about-text">تقدم جمعية خالد الخيرية الرعاية الشاملة
+                            وخدمات التأهيل والترفيه والدمج للأشخاص
+                            ذوي الإعاقة في بيئة حاضنة وداعمة تعمل
+                            على تغيير حياتهم من خلال تطوير قدراتهم
+                            وتعزيز استقلاليتهم وتحسين نوعية حياتهم
+                            وتعزيز اندماجهم في المجتمع حيث تهدف
+                            لتمكين الأفراد ذوي الإعاقة من خلال حلول
+                            مبتكرة ومستدامة تلبي احتياجاتهم الفريدة
+                            ونؤثر على حياتهم بشكل إيجابي.</p>
+                        </div>
+                    <div class="service-box">
+                            <h3 class="card-title">الاحتياجات</h3>
+                            <ul class="list-unstyled">
+                                <li><i class="glyphicon glyphicon-ok"></i> تجهيزات ومعدات غرفة علاج الطبيعي</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز قاعة الأنشطة</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز غرفة الحسية</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز غرفة العلاج الوظيفي</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> تكاليف غذاء ودواء</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> تجهيزات أحدثية</li>
+                                <li><i class="glyphicon glyphicon-ok"></i> كفالات</li>
+                            </ul>
+                        </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // JavaScript for toggle button
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

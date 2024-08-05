@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Khaled Charitable Society for Severe Disability</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="proj.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+
+        .header .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .header {
+            position: relative;
+            width: 100%;
+            padding: 20px 10%;
+            background: #081b29;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: #ededed;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar a {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ededed;
+            text-decoration: none;
+            margin-left: 35px;
+            transition: .3s;
+        }
+
+        .navbar a:hover,
+        .navbar a.active {
+            color: #00abf0;
+        }
+
+        .toggle-btn {
+            display: none;
+            font-size: 24px;
+            background: none;
+            border: none;
+            color: #ededed;
+            cursor: pointer;
+        }
+
+        .dropdown {
+            display: none;
+        }
+
+        @media screen and (max-width: 768px) {
+            .header {
+                padding: 15px 5%;
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #081b29;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+                z-index: 100;
+            }
+
+            .navbar.active {
+                display: flex;
+            }
+
+            .navbar a {
+                margin: 10px 0;
+                font-size: 18px;
+                text-align: center;
+            }
+
+            .toggle-btn {
+                display: block;
+            }
+
+            .dropdown {
+                display: block;
+                width: 100%;
+            }
+
+            .dropdown .bx {
+                display: flex;
+                justify-content: space-between;
+                padding: 10px;
+                cursor: pointer;
+            }
+
+            .dropdown-content {
+                display: none;
+                flex-direction: column;
+                background-color: #081b29;
+                width: 100%;
+                position: relative;
+                z-index: 1;
+                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            }
+
+            .dropdown-content a {
+                color: #ededed;
+                text-decoration: none;
+                padding: 12px 16px;
+                display: block;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #00abf0;
+            }
+
+            .dropdown-content.active {
+                display: flex;
+            }
+        }
+
+        .contact-section {
+            padding: 50px 10%;
+            background: #f9f9f9;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .contact-info div {
+            background: #fff;
+            color: #081b29;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            flex: 1;
+            min-width: 250px;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            font-size: 24px;
+            margin-right: 10px;
+            color: #00abf0;
+        }
+
+        .contact-info p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        .contact-info a {
+            color: #00abf0;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .footer {
+            background: #081b29;
+            color: #ededed;
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Khaled Charitable Society</a>
+        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
+        <nav class="navbar" dir="rtl">
+            <a href="Home.html">الصفحة الرئيسية</a>
+            <a href="Aboutus.html">من نحن</a>
+            <a href="ourGoals.html">الخدمات و الأهداف</a>
+            <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
+            <a href="contactus.html" class="active">طرق التواصل</a>
+        </nav>
+    </header>
+
+    <section class="contact-section" dir="rtl">
+        <div class="contact-info">
+            <div>
+                <i class='bx bx-phone'></i>
+                <p>59-360-8650 972+ </p>
+            </div>
+            <div>
+                <i class='bx bx-envelope'></i>
+                <p><a href="mailto:khaled.sccd@gmail.com">khaled.sccd@gmail.com</a></p>
+            </div>
+            <div>
+                <i class='bx bx-map'></i>
+                <p>العنوان: رام الله – بطن الهوى شارع أثينا، إسكان شيماء، ط.أرضي شقة G02</p>
+            </div>
+            <div>
+                <i class='bx bx-globe'></i>
+                <p>Khaled Charitable Society for Severe Disability</p>
+                <p>جمعية خالد للإعاقة الشديدة</p>
+            </div>
+            <div>
+                <i class='bx bx-donate-heart'></i>
+                <p>للتبرع: رقم حساب الجمعية 64325 بنك الاستثمار الفلسطيني</p>
+            </div>
+            <div>
+                <i class='bx bx-share-alt'></i>
+                <p><a href="https://www.facebook.com/KCSSDisability">Facebook</a></p>
+            </div>
+            <div>
+                <i class='bx bxl-instagram'></i>
+                <p><a href="https://www.instagram.com/khaled.cssd?igsh=bXl0YW02MmpucGxu">instagram</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2024 Khaled Charitable Society for Severe Disability. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.toggle-btn').addEventListener('click', function() {
+            document.querySelector('.navbar').classList.toggle('active');
+        });
+
+        document.querySelector('.bx-menu').addEventListener('click', function() {
+            document.querySelector('.dropdown-content').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
