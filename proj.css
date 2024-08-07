@@ -66,7 +66,7 @@ body {
 
 .home {
     height: 100vh;
-   /* background: url('picture/khaledd-removebg-preview.png') no-repeat;*/
+/*  background: url('picture/khaledd-removebg-preview.png') no-repeat;*/
     background-position: left ;
     margin-left: 120px;
     display: flex;
@@ -170,6 +170,7 @@ body {
     width: 170px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 
 .home-sci1 {
@@ -178,6 +179,7 @@ body {
     width: 170px;
     display: flex;
     justify-content: space-between;
+    gap: 10px;
 }
 .home-sci a {
     position: relative;
@@ -619,6 +621,26 @@ margin-bottom: 20px;
 
 .toggle-btn {
     display: block; /* Show toggle button on mobile */
+}
+
+.home-sci {
+    bottom: 10px; /* تعديل المسافة من الأسفل */
+    gap: 10px; 
+}
+
+.home-sci a {
+    margin-bottom: 0;
+}
+
+.home-sci1 {
+    bottom:0px; /* تعديل المسافة من الأسفل */
+    gap: 10px; 
+    top: 1000px;
+    margin-left: 80px;
+}
+
+.home-sci1 a {
+    margin-bottom: 0;
 }
 }
 
