@@ -626,6 +626,7 @@ margin-bottom: 20px;
 .home-sci {
     bottom: 10px; /* تعديل المسافة من الأسفل */
     gap: 10px; 
+    top: 900px;
 }
 
 .home-sci a {
@@ -635,7 +636,7 @@ margin-bottom: 20px;
 .home-sci1 {
     bottom:0px; /* تعديل المسافة من الأسفل */
     gap: 10px; 
-    top: 1000px;
+    top:900px;
     margin-left: 80px;
 }
 
