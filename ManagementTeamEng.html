@@ -1,46 +1,330 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Khaled Charitable Society for Severe Disability</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel="stylesheet" href="proj.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <header class="header">
-            <a href="HomeEng.html" class="logo">Khaled Charitable Society </a>
-            <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
-            <nav class="navbar">
-                <a href="HomeEng.html">Home</a>
-                <a href="AboutusEng.html">About Us</a>
-                <a href="ourgoalsEng.html">Services </a>
-                <a href="ManagementTeamEng.html" class="active">Managment Team</a>
-                <a href="contactusEng.html" >Contact Us</a>
-            </nav>
-          </header>
-          <section class="board-section" dir="ltr">
-            <h2>Management Team</h2>
-            <ul class="board-list">
-                <li><div class="box"><i class='bx bx-check'></i>Layali Al-Daghma</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Najih Qadi</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Muhannad Shafiei</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Deemah Mashaqi</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Iyad Rafidi</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Nancy Awad</div></li>
-                <li><div class="box"><i class='bx bx-check'></i>Nael Assi</div></li>
-            </ul>
-            </ul>
-        </section>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Management Team - Khaled Charitable Society for Severe Disabilities</title>
+    <meta name="description" content="Meet the dedicated management team of Khaled Charitable Society">
     
-        <footer class="footer">
-            <p>&copy; 2024 Khaled Charitable Society for Severe Disability. All rights reserved.</p>
-        </footer>
-        <script>
-            // JavaScript for toggle button
-            document.querySelector('.toggle-btn').addEventListener('click', function() {
-                document.querySelector('.navbar').classList.toggle('active');
-            });
-        </script>
-    </body>
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="proj.css">
+</head>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="HomeEng.html" class="logo">Khaled Charitable Society</a>
+
+        <nav class="navbar">
+            <a href="HomeEng.html">Home</a>
+            <a href="AboutusEng.html">About Us</a>
+            <a href="ourgoalsEng.html">Goals & Services</a>
+            <a href="ManagementTeamEng.html" class="active">Management Team</a>
+            <a href="contactusEng.html">Contact Us</a>
+            <a href="advertisementsEng.html">Announcements</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class='bx bx-globe'></i> Language
+                </button>
+                <div class="dropdown-content">
+                    <a href="ManagementTeamEng.html">English</a>
+                    <a href="AdministrativeBoard.html">العربية</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-header">
+            <h1>Management Team</h1>
+            <p>
+                Meet our dedicated management team members who lead the vision and goals of the society
+            </p>
+        </div>
+
+        <!-- Team Members Grid -->
+        <div class="team-grid">
+            <!-- Team Member 1 -->
+            <div class="team-card featured">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Layali Khaled Abdul Aziz Al-Daghmeh</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Founding member dedicated to community service and developing society programs 
+                        to serve people with moderate and severe disabilities.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Najeh Omar Obeid Qadi</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Contributes to strategic policy development and advancing society services 
+                        to achieve the best results for beneficiaries.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Muhannad Abdul Rahim Ibrahim Shafei</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Specialist in developing rehabilitation programs and works to ensure quality 
+                        of services provided and develop treatment and care methods.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Dima Saad Arsan Mashqi</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Focuses on developing psychological and social support programs and works to 
+                        enhance the role of families in caring for their children with disabilities.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Iyad Abdullah Salim Rufeidi</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Works on developing community partnerships and building relationships with 
+                        supporting institutions to enhance society services.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 6 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Nancy Othman Haidar Awad</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Specialist in human resources management and developing team competencies 
+                        and ensuring a positive and productive work environment.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 7 -->
+            <div class="team-card">
+                <div class="team-image">
+                    <i class='bx bx-user-circle'></i>
+                </div>
+                <div class="team-info">
+                    <h3>Nael Ali Assi</h3>
+                    <p class="position">Board Member</p>
+                    <p class="description">
+                        Contributes to strategic planning for the society and works on developing 
+                        management and monitoring systems to ensure achieving institutional goals.
+                    </p>
+                    <div class="team-contact">
+                        <a href="mailto:info@khaledcharity.org">
+                            <i class='bx bx-envelope'></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Organizational Structure -->
+        <div style="margin-top: 5rem;">
+            <h2 class="section-title">Organizational Structure</h2>
+            
+            <div class="content-card">
+                <div class="org-chart">
+                    <div class="org-level">
+                        <div class="org-box chair">
+                            <i class='bx bx-crown'></i>
+                            <span>Board Chairperson</span>
+                        </div>
+                    </div>
+                    
+                    <div class="org-level">
+                        <div class="org-box vice-chair">
+                            <i class='bx bx-user-pin'></i>
+                            <span>Vice Chairperson</span>
+                        </div>
+                    </div>
+                    
+                    <div class="org-level" style="display: flex; gap: 2rem; justify-content: center;">
+                        <div class="org-box secretary">
+                            <i class='bx bx-edit'></i>
+                            <span>Secretary</span>
+                        </div>
+                        <div class="org-box treasurer">
+                            <i class='bx bx-dollar-circle'></i>
+                            <span>Treasurer</span>
+                        </div>
+                    </div>
+                    
+                    <div class="org-level" style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <div class="org-box member">
+                            <i class='bx bx-cog'></i>
+                            <span>Programs Director</span>
+                        </div>
+                        <div class="org-box member">
+                            <i class='bx bx-megaphone'></i>
+                            <span>Public Relations</span>
+                        </div>
+                        <div class="org-box member">
+                            <i class='bx bx-briefcase'></i>
+                            <span>Legal Advisor</span>
+                        </div>
+                        <div class="org-box member">
+                            <i class='bx bx-group'></i>
+                            <span>Board Members</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Board -->
+        <div style="margin-top: 4rem;">
+            <div class="content-card" style="background: var(--bg-secondary); border-left: 4px solid var(--primary-color);">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">
+                    <i class='bx bx-phone' style="margin-right: 0.5rem;"></i>
+                    Contact the Management Team
+                </h3>
+                <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                    For inquiries, partnerships, or suggestions, please don't hesitate to contact our management team.
+                </p>
+                <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                    <a href="mailto:info@khaledcharity.org" class="btn btn-primary">
+                        <i class='bx bx-envelope'></i>
+                        Send Email
+                    </a>
+                    <a href="tel:+970123456789" class="btn btn-secondary">
+                        <i class='bx bx-phone'></i>
+                        Call Us
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- Theme Toggle Button -->
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
+    <script>
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+        });
+
+        // Theme toggle functionality
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        const icon = themeToggle.querySelector('i');
+
+        // Check for saved theme preference
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        body.setAttribute('data-theme', savedTheme);
+        updateThemeIcon(savedTheme);
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+
+        function updateThemeIcon(theme) {
+            icon.className = theme === 'dark' ? 'bx bx-sun' : 'bx bx-moon';
+        }
+    </script>
+</body>
+</html>

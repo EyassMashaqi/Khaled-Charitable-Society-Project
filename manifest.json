@@ -1,0 +1,67 @@
+{
+  "name": "جمعية خالد الخيرية للإعاقة الشديدة",
+  "short_name": "جمعية خالد",
+  "description": "جمعية خالد الخيرية هي منظمة غير ربحية تقدم خدمات التأهيل والرعاية للأشخاص ذوي الإعاقة المتوسطة والشديدة",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#1565c0",
+  "theme_color": "#1565c0",
+  "orientation": "portrait-primary",
+  "lang": "ar",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "picture/logo-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable any"
+    },
+    {
+      "src": "picture/logo-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable any"
+    }
+  ],
+  "categories": ["charity", "disability", "rehabilitation", "community"],
+  "screenshots": [
+    {
+      "src": "picture/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide"
+    },
+    {
+      "src": "picture/screenshot-narrow.png",
+      "sizes": "750x1334",
+      "type": "image/png",
+      "form_factor": "narrow"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "تواصل معنا",
+      "short_name": "اتصال",
+      "description": "تواصل مع جمعية خالد الخيرية",
+      "url": "/contactus.html",
+      "icons": [
+        {
+          "src": "picture/contact-icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    },
+    {
+      "name": "الإعلانات",
+      "short_name": "إعلانات",
+      "description": "آخر الإعلانات والعطاءات",
+      "url": "/advertisements.html",
+      "icons": [
+        {
+          "src": "picture/announcements-icon-96.png",
+          "sizes": "96x96"
+        }
+      ]
+    }
+  ]
+} 

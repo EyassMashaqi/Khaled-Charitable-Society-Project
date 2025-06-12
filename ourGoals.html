@@ -1,264 +1,320 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>الخدمات و الأهداف</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الأهداف والخدمات - جمعية خالد الخيرية للإعاقة الشديدة</title>
+    <meta name="description" content="تعرف على أهداف وخدمات جمعية خالد الخيرية للإعاقة الشديدة وبرامجنا المتخصصة في التأهيل والرعاية">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="proj.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>    
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-
-        .header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .about {
-            padding: 50px 10%;
-        }
-
-        .card-title {
-            font-size: 24px;
-            color: #ededed;
-            margin-bottom: 20px;
-        }
-
-        .services {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .service-box {
-            background: #fff;
-            color: #081b29;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-            flex: 1;
-            min-width: 250px;
-        }
-
-        .service-box h4 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-
-        .service-box p {
-            font-size: 16px;
-        }
-
-        /* Base styles for header and navbar */
-        .header {
-            position: relative;
-            width: 100%;
-            padding: 20px 10%;
-            background: #081b29;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 100;
-        }
-
-        .logo {
-            font-size: 24px;
-            color: #ededed;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .navbar {
-            display: flex;
-            align-items: center;
-        }
-
-        .navbar a {
-            font-size: 20px;
-            font-weight: bold;
-            color: #ededed;
-            text-decoration: none;
-            margin-left: 35px;
-            transition: .3s;
-        }
-
-        .navbar a:hover,
-        .navbar a.active {
-            color: #00abf0;
-        }
-
-        /* Toggle Button for Mobile */
-        .toggle-btn {
-            display: none;
-            font-size: 24px;
-            background: none;
-            border: none;
-            color: #ededed;
-            cursor: pointer;
-        }
-
-        .dropdown {
-            display: none;
-        }
-
-        /* Responsive adjustments */
-        @media screen and (max-width: 768px) {
-            .header {
-                padding: 15px 5%;
-                flex-direction: column;
-                align-items: flex-start;
-            }
-
-            .navbar {
-                display: none; /* Hide navbar items initially */
-                flex-direction: column;
-                width: 100%;
-                background-color: #081b29;
-                position: absolute;
-                top: 60px; /* Adjust based on header height */
-                left: 0;
-                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-                z-index: 100;
-            }
-
-            .navbar.active {
-                display: flex; /* Show navbar items when active */
-            }
-
-            .navbar a {
-                margin: 10px 0;
-                font-size: 18px;
-                text-align: center;
-            }
-
-            .toggle-btn {
-                display: block; /* Show toggle button on mobile */
-            }
-
-            .dropdown {
-                display: block;
-                width: 100%;
-            }
-
-            .dropdown .bx {
-                display: flex;
-                justify-content: space-between;
-                padding: 10px;
-                cursor: pointer;
-            }
-
-            .dropdown-content {
-                display: none;
-                flex-direction: column;
-                background-color: #081b29;
-                width: 100%;
-                position: relative;
-                z-index: 1;
-                box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-            }
-
-            .dropdown-content a {
-                color: #ededed;
-                text-decoration: none;
-                padding: 12px 16px;
-                display: block;
-            }
-
-            .dropdown-content a:hover {
-                background-color: #00abf0;
-            }
-
-            .dropdown-content.active {
-                display: flex;
-            }
-        }
-    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
+
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
-        <a href="index.html" class="logo">Khaled Charitable Society</a>
-        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
-        <nav class="navbar" dir="rtl">
-            <a href="index.html">الصفحة الرئيسية</a>
-            <a href="Aboutus.html">من نحن</a>
-            <a href="ourGoals.html" class="active">الخدمات و الأهداف</a>
-            <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
-            <a href="contactus.html">طرق التواصل</a>
-            <a href="advertisements.html"> الإعلانات</a>
+        <a href="index.html" class="logo arabic-text">جمعية خالد الخيرية</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="arabic-text">الرئيسية</a>
+            <a href="Aboutus.html" class="arabic-text">من نحن</a>
+            <a href="ourGoals.html" class="active arabic-text">الأهداف والخدمات</a>
+            <a href="AdministrativeBoard.html" class="arabic-text">الهيئة الإدارية</a>
+            <a href="contactus.html" class="arabic-text">تواصل معنا</a>
+            <a href="advertisements.html" class="arabic-text">الإعلانات</a>
+
+            <div class="dropdown">
+                <button class="dropbtn arabic-text">
+                    <i class='bx bx-globe'></i> اللغة
+                </button>
+                <div class="dropdown-content">
+                    <a href="ourGoals.html" class="arabic-text">العربية</a>
+                    <a href="ourgoalsEng.html">English</a>
+                </div>
+            </div>
         </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
     </header>
 
-    <section class="about" dir="rtl">
-        <div class="container1">
-            <div class="row">
-                <!-- الخدمات -->
-                <div class="col-md-12">
-                    <h3 class="card-title">خدماتنا</h3>
-                    <div class="services">
-                        <div class="service-box">
-                            <h4>العلاج الطبيعي</h4>
-                            <p>توفير جلسات العلاج الطبيعي بشكل منتظم عن طريق تقييم الحالات وتحديد نقاط القوة والضعف ووضع خطة مناسبة لكل حالة بهدف الحفاظ على قدراتهم وتنميتها.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>العلاج الوظيفي</h4>
-                            <p>توفير خدمات العلاج الوظيفي بشكل منتظم من خلال تحسين الأساليب والمعدات للعمل على تحسين قدراتهم في أداء أنشطة الحياة اليومية وتطوير مهاراتهم.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>الرعاية الشاملة</h4>
-                            <p>تقديم الرعاية الصحية والنظافة والعناية وغيرها من الاحتياجات.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>الترفيه</h4>
-                            <p>العمل على توفير برامج ترفيهية متنوعة وملائمة من أجل تعزيز إنتمائهم ومشاركتهم الإجتماعية، وجعلهم يشعرون بالسعادة والتواصل مع الآخرين.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- الخدمات -->
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-header">
+            <h1 class="arabic-text">الأهداف والخدمات</h1>
+            <p class="arabic-text">
+                تعرف على أهدافنا الاستراتيجية وخدماتنا المتخصصة في خدمة الأشخاص ذوي الإعاقة المتوسطة والشديدة
+            </p>
+        </div>
 
-                <!-- أهداف الجمعية -->
-                <div class="col-md-12">
-                    <h3 class="card-title">أهداف الجمعية</h3>
-                    <div class="services">
-                        <div class="service-box">
-                            <h4>توفير الرعاية الشاملة</h4>
-                            <p>توفير الرعاية الشاملة من خلال تقديم خدمات التأهيل والرعاية والدمج للاشخاص ذوي الاعاقة.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>إنشاء مرفق معاصر</h4>
-                            <p>إنشاء مرفق معاصر ومجهز بالكامل يمكن الوصول إليه بسهولة وتصميمه خصيصا لمتطلبات الفريدة للاشخاص ذوي الاعاقة.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>إنشاء قنوات تواصل</h4>
-                            <p>إنشاء قنوات تواصل مع المؤسسات الحكومية والمجتمع المدني وقطاع الأعمال لتقديم أفضل خدمة ممكنة.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>تلبية احتياجات الأفراد</h4>
-                            <p>تلبية احتياجات الأفراد الذين يعانون من الإعاقات المتوسطة والشديدة باعتبارهم المستفيدين الأساسيين من خدماتنا وتمكينهم من تلبية احتياجاتهم.</p>
-                        </div>
-                        <div class="service-box">
-                            <h4>الدفاع عن حقوق ذوي الاعاقة</h4>
-                            <p>الدفاع عن حقوق ذوي الاعاقة وتفعيل دورهم في المجتمع، وتعريفهم بحقوقهم وواجباتهم وسبل العمل مع بقية المجتمع.</p>
-                        </div>
+        <!-- Goals Section -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="section-title arabic-text">أهدافنا الاستراتيجية</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-user-check' style="font-size: 3rem; color: var(--primary-color);"></i>
                     </div>
+                    <h3 class="arabic-text">التأهيل الشامل</h3>
+                    <p class="arabic-text">
+                        تقديم خدمات التأهيل الشاملة للأشخاص ذوي الإعاقة المتوسطة والشديدة من خلال برامج 
+                        متخصصة تهدف إلى تطوير قدراتهم الجسدية والذهنية والاجتماعية.
+                    </p>
                 </div>
-                <!-- أهداف الجمعية -->
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-group' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">الدمج المجتمعي</h3>
+                    <p class="arabic-text">
+                        العمل على دمج الأشخاص ذوي الإعاقة في المجتمع من خلال برامج التوعية والأنشطة 
+                        التفاعلية التي تعزز قبول المجتمع وتكسر الحواجز الاجتماعية.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-home-heart' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">دعم الأسر</h3>
+                    <p class="arabic-text">
+                        تقديم الدعم والإرشاد لأسر الأشخاص ذوي الإعاقة من خلال برامج التدريب والتوجيه 
+                        لمساعدتهم في التعامل الصحيح مع احتياجات أبنائهم.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-brain' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">التطوير المعرفي</h3>
+                    <p class="arabic-text">
+                        تطوير القدرات المعرفية والذهنية من خلال برامج تعليمية وتدريبية مصممة خصيصاً 
+                        لتناسب احتياجات كل فرد وقدراته الخاصة.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-heart' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">الرعاية النفسية</h3>
+                    <p class="arabic-text">
+                        توفير الدعم النفسي والاجتماعي اللازم لتحسين الحالة النفسية والاجتماعية 
+                        للأشخاص ذوي الإعاقة وأسرهم.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-bulb' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">التوعية المجتمعية</h3>
+                    <p class="arabic-text">
+                        نشر الوعي في المجتمع حول حقوق الأشخاص ذوي الإعاقة وتغيير النظرة المجتمعية 
+                        السلبية نحوهم من خلال حملات التوعية والأنشطة التعليمية.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="section-title arabic-text">خدماتنا المتخصصة</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-health' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">العلاج الطبيعي</h3>
+                    <ul class="arabic-text">
+                        <li>تقييم وعلاج الحالات الحركية</li>
+                        <li>تطوير المهارات الحركية الكبرى</li>
+                        <li>تحسين التوازن والتناسق</li>
+                        <li>استخدام الأجهزة المساعدة</li>
+                        <li>برامج تأهيل ما بعد الإصابة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-hand' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">العلاج الوظيفي</h3>
+                    <ul class="arabic-text">
+                        <li>تطوير المهارات الحركية الدقيقة</li>
+                        <li>تدريب على أنشطة الحياة اليومية</li>
+                        <li>استخدام الأدوات التكيفية</li>
+                        <li>تحسين التآزر البصري الحركي</li>
+                        <li>تطوير المهارات المعرفية</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-microphone' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">علاج النطق واللغة</h3>
+                    <ul class="arabic-text">
+                        <li>تقييم وعلاج اضطرابات النطق</li>
+                        <li>تطوير مهارات التواصل</li>
+                        <li>استخدام وسائل التواصل البديلة</li>
+                        <li>تحسين قدرات الفهم والتعبير</li>
+                        <li>برامج التواصل التفاعلي</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-palette' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">الأنشطة الترفيهية</h3>
+                    <ul class="arabic-text">
+                        <li>الأنشطة الفنية والحرفية</li>
+                        <li>الألعاب التعليمية والترفيهية</li>
+                        <li>الموسيقى والرقص</li>
+                        <li>الرحلات والنزهات</li>
+                        <li>الأنشطة الرياضية المكيفة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-book-reader' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">البرامج التعليمية</h3>
+                    <ul class="arabic-text">
+                        <li>تعليم المهارات الأكاديمية الأساسية</li>
+                        <li>برامج التعلم التفاعلي</li>
+                        <li>استخدام التكنولوجيا التعليمية</li>
+                        <li>برامج محو الأمية</li>
+                        <li>تطوير المهارات الحياتية</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-wrench' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">التدريب المهني</h3>
+                    <ul class="arabic-text">
+                        <li>تقييم القدرات المهنية</li>
+                        <li>التدريب على مهارات العمل</li>
+                        <li>برامج الورش المحمية</li>
+                        <li>التأهيل للعمل في المجتمع</li>
+                        <li>متابعة ما بعد التوظيف</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs Section -->
+        <div>
+            <h2 class="section-title arabic-text">برامجنا الخاصة</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-calendar-star' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">برنامج التأهيل المكثف</h3>
+                    <p class="arabic-text">
+                        برنامج شامل لمدة 6 أشهر يشمل كافة خدمات التأهيل والعلاج مع متابعة فردية مكثفة 
+                        لكل مستفيد لضمان تحقيق أفضل النتائج.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-sun' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">المخيم الصيفي</h3>
+                    <p class="arabic-text">
+                        مخيم صيفي لمدة شهرين يتضمن أنشطة ترفيهية وتعليمية وعلاجية متنوعة في بيئة 
+                        محفزة وممتعة تعزز من التطوير الشامل للمشاركين.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-home-smile' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">برنامج الخدمات المنزلية</h3>
+                    <p class="arabic-text">
+                        خدمات التأهيل والعلاج في المنزل للحالات التي لا تستطيع الوصول للمركز، 
+                        مع تدريب الأسرة على كيفية الاستمرار في البرنامج.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-group' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">برنامج دعم الأسر</h3>
+                    <p class="arabic-text">
+                        برنامج شامل لدعم وتدريب أسر الأشخاص ذوي الإعاقة يشمل جلسات إرشادية 
+                        وورش تدريبية ومجموعات الدعم النفسي.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-megaphone' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">برنامج التوعية المجتمعية</h3>
+                    <p class="arabic-text">
+                        حملات توعية مجتمعية في المدارس والجامعات والمؤسسات لنشر الوعي 
+                        حول حقوق الأشخاص ذوي الإعاقة وأهمية دمجهم في المجتمع.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-heart-circle' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3 class="arabic-text">برنامج المتطوعين</h3>
+                    <p class="arabic-text">
+                        برنامج لتدريب وتأهيل المتطوعين للمشاركة في تقديم الخدمات والأنشطة، 
+                        مما يعزز من الشراكة المجتمعية في خدمة هذه الفئة.
+                    </p>
+                </div>
             </div>
         </div>
     </section>
 
-    <script>
-        // JavaScript for toggle button
-        document.querySelector('.toggle-btn').addEventListener('click', function() {
-            document.querySelector('.navbar').classList.toggle('active');
-        });
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="العودة إلى الأعلى">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
 
-        // JavaScript for dropdown menu
-        document.querySelector('.bx-menu').addEventListener('click', function() {
-            document.querySelector('.dropdown-content').classList.toggle('active');
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
+    <script>
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
         });
     </script>
 </body>
+
 </html>
