@@ -1,68 +1,279 @@
 <!DOCTYPE html>
-<html lang="EN">
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Khaled Charitable Society for Severe Disability</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Khaled Charitable Society for Severe Disabilities</title>
+    <meta name="description" content="Contact Khaled Charitable Society for Severe Disabilities - contact information, address, working hours and various communication methods">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="proj.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <header class="header">
-            <a href="HomeEng.html" class="logo">Khaled Charitable Society </a>
-            <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
-            <nav class="navbar">
-                <a href="HomeEng.html">Home</a>
-                <a href="AboutusEng.html">About Us</a>
-                <a href="ourgoalsEng.html">Services </a>
-                <a href="ManagementTeamEng.html">Managment Team</a>
-                <a href="contactusEng.html" class="active">Contact Us</a>
-            </nav>
-            
-          </header>
+</head>
 
-          <section class="contact-section" dir="ltr">
-        
-            <div class="contact-info" dir="ltr">
-                <div>
-                    <i class='bx bx-phone'></i>
-                    <p>+972-59-360-8650  </p>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="HomeEng.html" class="logo">Khaled Charitable Society</a>
+
+        <nav class="navbar">
+            <a href="HomeEng.html">Home</a>
+            <a href="AboutusEng.html">About Us</a>
+            <a href="ourgoalsEng.html">Goals & Services</a>
+            <a href="ManagementTeamEng.html">Management Team</a>
+            <a href="contactusEng.html" class="active">Contact Us</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class='bx bx-globe'></i> Language
+                </button>
+                <div class="dropdown-content">
+                    <a href="contactusEng.html">English</a>
+                    <a href="contactus.html">العربية</a>
                 </div>
-                <div>
-                    <i class='bx bx-envelope'></i>
-                    <p><a href="mailto:khaled.sccd@gmail.com">khaled.cssd@gmail.com</a></p>
-                </div>
-                <div>
-                    <i class='bx bx-map'></i>
-                    <p>Address: Ramallah - Batan al-Hawa, Athena Street, Shaima Housing, Ground Floor, Apartment G02</p>
-                </div>
-                <div>
-                    <i class='bx bx-globe'></i>
-                    <p>Khaled Charitable Society for Severe Disability</p>
-                </div>
-                <div>
-                    <i class='bx bx-donate-heart'></i>
-                    <p>To donate: Palestine Investment Bank account number 64325</p>
-                </div>
-                <div>
-                    <i class='bx bx-share-alt'></i>
-                    <p><a href="https://www.facebook.com/KCSSDisability">Facebook</a></p>
-                </div>
-                <div>
-                <i class='bx bxl-instagram'></i>
-                <p><a href="https://www.instagram.com/khaled.cssd?igsh=bXl0YW02MmpucGxu">instagram</a></p>
             </div>
+        </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-header">
+            <h1>Contact Us</h1>
+            <p>
+                We are here to serve you and we welcome your contact at any time
+            </p>
+        </div>
+
+        <!-- Contact Information Grid -->
+        <div class="content-grid" style="margin-bottom: 4rem;">
+            <!-- Address Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-map' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Address</h3>
+                <p>
+                    Ramallah - Ramallah and Al-Bireh Governorate<br>
+                    State of Palestine
+                </p>
+                <a href="https://www.google.com/maps/dir//31.9035765,35.1923324" 
+                   target="_blank" 
+                   style="display: inline-flex; align-items: center; gap: 0.5rem; color: var(--primary-color); text-decoration: none; margin-top: 1rem;">
+                    <i class='bx bx-map-pin'></i>
+                    <span>View on Map</span>
+                </a>
             </div>
-        </section>
+
+            <!-- Phone Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-phone' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Phone</h3>
+                <p>
+                    <a href="tel:+970123456789" style="color: var(--text-primary); text-decoration: none;">
+                        +970 123 456 789
+                    </a>
+                </p>
+                <p>
+                    <a href="tel:+970987654321" style="color: var(--text-primary); text-decoration: none;">
+                        +970 987 654 321
+                    </a>
+                </p>
+            </div>
+
+            <!-- Email Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-envelope' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Email</h3>
+                <p>
+                    <a href="mailto:info@khaledcharity.org" style="color: var(--text-primary); text-decoration: none;">
+                        info@khaledcharity.org
+                    </a>
+                </p>
+                <p>
+                    <a href="mailto:contact@khaledcharity.org" style="color: var(--text-primary); text-decoration: none;">
+                        contact@khaledcharity.org
+                    </a>
+                </p>
+            </div>
+
+            <!-- Working Hours Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-time' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Working Hours</h3>
+                <div>
+                    <p><strong>Sunday - Thursday:</strong> 8:00 AM - 4:00 PM</p>
+                    <p><strong>Friday:</strong> Closed</p>
+                    <p><strong>Saturday:</strong> 9:00 AM - 1:00 PM</p>
+                </div>
+            </div>
+
+            <!-- Social Media Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-share-alt' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Social Media</h3>
+                <div style="display: flex; gap: 1rem; justify-content: center; margin-top: 1rem;">
+                    <a href="https://www.facebook.com/KCSSDisability" 
+                       target="_blank" 
+                       style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none;">
+                        <i class='bx bxl-facebook'></i>
+                    </a>
+                    <a href="https://www.instagram.com/khaled.cssd" 
+                       target="_blank" 
+                       style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none;">
+                        <i class='bx bxl-instagram'></i>
+                    </a>
+                    <a href="mailto:info@khaledcharity.org" 
+                       style="display: flex; align-items: center; justify-content: center; width: 40px; height: 40px; background: var(--primary-color); color: white; border-radius: 50%; text-decoration: none;">
+                        <i class='bx bx-envelope'></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Registration Info Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-id-card' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3>Registration Information</h3>
+                <div>
+                    <p><strong>Registration Number:</strong> RA-22220018-C</p>
+                    <p><strong>Established:</strong> December 8, 2022</p>
+                    <p><strong>Governorate:</strong> Ramallah and Al-Bireh</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form Section -->
+        <div style="margin-bottom: 4rem;">
+            <h2 class="section-title">Send Us a Message</h2>
+            
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="subject">Subject *</label>
+                    <select id="subject" name="subject" required>
+                        <option value="">Select Subject</option>
+                        <option value="inquiry">General Inquiry</option>
+                        <option value="services">Services Inquiry</option>
+                        <option value="volunteer">Volunteering</option>
+                        <option value="donation">Donation</option>
+                        <option value="complaint">Complaint or Suggestion</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message *</label>
+                    <textarea id="message" name="message" rows="5" required placeholder="Write your message here..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <i class='bx bx-send'></i>
+                    Send Message
+                </button>
+            </form>
+        </div>
+
+        <!-- Emergency Contact Section -->
+        <div class="content-card" style="background: var(--bg-secondary); border-left: 4px solid var(--accent-color);">
+            <h3>Emergency Contact</h3>
+            <p>
+                In case of an emergency that requires immediate intervention, please contact us at:
+            </p>
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+                <i class='bx bx-phone-call' style="font-size: 1.5rem; color: var(--accent-color);"></i>
+                <strong>
+                    <a href="tel:+970123456789" style="color: var(--accent-color); text-decoration: none;">
+                        +970 123 456 789
+                    </a>
+                </strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
     
-        <footer class="footer">
-            <p>&copy; 2024 Khaled Charitable Society for Severe Disability. All rights reserved.</p>
-        </footer>
-        <script>
-            // JavaScript for toggle button
-            document.querySelector('.toggle-btn').addEventListener('click', function() {
-                document.querySelector('.navbar').classList.toggle('active');
-            });
-        </script>
-    </body>
+    <script>
+        // Form submission handling
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Simple validation
+            if (!data.name || !data.email || !data.subject || !data.message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            // Simulate form submission
+            const submitBtn = this.querySelector('.submit-btn');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Sending...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('Thank you! Your message has been sent successfully. We will contact you soon.');
+                this.reset();
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
+            }, 2000);
+        });
+        
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

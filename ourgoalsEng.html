@@ -1,88 +1,319 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Khaled Charitable Society for Severe Disability</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Goals & Services - Khaled Charitable Society for Severe Disabilities</title>
+    <meta name="description" content="Learn about the goals and services of Khaled Charitable Society for Severe Disabilities and our specialized programs in rehabilitation and care">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="proj.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    </head>
-    <body>
-        <header class="header">
-            <a href="HomeEng.html" class="logo">Khaled Charitable Society </a>
-            <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
-            <nav class="navbar">
-                <a href="HomeEng.html">Home</a>
-                <a href="AboutusEng.html">About Us</a>
-                <a href="ourgoalsEng.html" class="active">Services </a>
-                <a href="ManagementTeamEng.html">Managment Team</a>
-                <a href="contactusEng.html" >Contact Us</a>
-            </nav>
-          </header>
+</head>
 
-          <section class="about" dir="ltr">
-            <div class="container1">
-              <div class="row">
-                <!-- الخدمات -->
-                <div class="col-md-12">
-                  <h3 class="card-title">Services</h3>
-                  <div class="services">
-                      <div class="service-box">
-                          <h4>Physiotherapy</h4>
-                          <p>Provide physical therapy sessions on a regular basis by evaluating cases, identifying strengths and weaknesses, and developing a suitable plan for each case to maintain and develop their abilities.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Occupational therapy</h4>
-                          <p>Providing occupational therapy services on a regular basis by optimizing methods and equipment to work on improving their abilities to perform activities of daily living and developing their skills.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Comprehensive care</h4>
-                          <p>Provide healthcare, hygiene, care, and other needs.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Entertainment</h4>
-                          <p>Work to provide diverse and appropriate recreational programs in order to enhance their belonging and social participation, and make them feel happy and connected to others.</p>
-                      </div>
-                  </div>
+<body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="HomeEng.html" class="logo">Khaled Charitable Society</a>
+
+        <nav class="navbar">
+            <a href="HomeEng.html">Home</a>
+            <a href="AboutusEng.html">About Us</a>
+            <a href="ourgoalsEng.html" class="active">Goals & Services</a>
+            <a href="ManagementTeamEng.html">Management Team</a>
+            <a href="contactusEng.html">Contact Us</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class='bx bx-globe'></i> Language
+                </button>
+                <div class="dropdown-content">
+                    <a href="ourgoalsEng.html">English</a>
+                    <a href="ourGoals.html">العربية</a>
                 </div>
-                <!-- الخدمات -->
-    
-                <!-- أهداف الجمعية -->
-                <div class="col-md-12">
-                  <h3 class="card-title">Objectives of the Society</h3>
-                  <div class="services">
-                      <div class="service-box">
-                          <h4>Providing comprehensive care</h4>
-                          <p>Providing comprehensive care by providing rehabilitation, care and integration services for people with disabilities.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Creating a contemporary facility</h4>
-                          <p>Create a contemporary, fully-equipped, easily accessible facility tailored to the unique requirements of people with disabilities.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Create communication channels</h4>
-                          <p>Establish communication channels with government institutions, civil society, and the business sector to provide the best possible service.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Meeting people's needs</h4>
-                          <p>Meeting the needs of individuals with moderate and severe disabilities as the primary beneficiaries of our services and enabling them to meet their needs.</p>
-                      </div>
-                      <div class="service-box">
-                          <h4>Advocating for disability rights</h4>
-                          <p>Defending the rights of people with disabilities and activating their role in society, and informing them of their rights, duties, and ways of working with the rest of society.</p>
-                      </div>
-                  </div>
-                </div>
-                <!-- أهداف الجمعية -->
-    
-              </div>
             </div>
-          </section>
-          <script>
-            // JavaScript for toggle button
-            document.querySelector('.toggle-btn').addEventListener('click', function() {
-                document.querySelector('.navbar').classList.toggle('active');
-            });
-        </script>
-    </body>
+        </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-header">
+            <h1>Goals & Services</h1>
+            <p>
+                Learn about our strategic goals and specialized services in serving people with moderate and severe disabilities
+            </p>
+        </div>
+
+        <!-- Goals Section -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="section-title">Our Strategic Goals</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-user-check' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Comprehensive Rehabilitation</h3>
+                    <p>
+                        Providing comprehensive rehabilitation services for people with moderate and severe disabilities 
+                        through specialized programs aimed at developing their physical, mental, and social abilities.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-group' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Community Integration</h3>
+                    <p>
+                        Working to integrate people with disabilities into the community through awareness programs 
+                        and interactive activities that enhance community acceptance and break down social barriers.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-home-heart' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Family Support</h3>
+                    <p>
+                        Providing support and guidance to families of people with disabilities through training 
+                        and guidance programs to help them properly deal with their children's needs.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-brain' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Cognitive Development</h3>
+                    <p>
+                        Developing cognitive and mental abilities through educational and training programs 
+                        specifically designed to suit each individual's needs and special abilities.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-heart' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Psychological Care</h3>
+                    <p>
+                        Providing the necessary psychological and social support to improve the psychological 
+                        and social condition of people with disabilities and their families.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-bulb' style="font-size: 3rem; color: var(--primary-color);"></i>
+                    </div>
+                    <h3>Community Awareness</h3>
+                    <p>
+                        Spreading awareness in the community about the rights of people with disabilities and 
+                        changing negative community perceptions through awareness campaigns and educational activities.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div style="margin-bottom: 5rem;">
+            <h2 class="section-title">Our Specialized Services</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-health' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Physical Therapy</h3>
+                    <ul>
+                        <li>Assessment and treatment of motor conditions</li>
+                        <li>Development of gross motor skills</li>
+                        <li>Improving balance and coordination</li>
+                        <li>Use of assistive devices</li>
+                        <li>Post-injury rehabilitation programs</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-hand' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Occupational Therapy</h3>
+                    <ul>
+                        <li>Development of fine motor skills</li>
+                        <li>Training in activities of daily living</li>
+                        <li>Use of adaptive tools</li>
+                        <li>Improving visual-motor coordination</li>
+                        <li>Cognitive skills development</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-microphone' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Speech & Language Therapy</h3>
+                    <ul>
+                        <li>Assessment and treatment of speech disorders</li>
+                        <li>Communication skills development</li>
+                        <li>Use of alternative communication methods</li>
+                        <li>Improving comprehension and expression abilities</li>
+                        <li>Interactive communication programs</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-palette' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Recreational Activities</h3>
+                    <ul>
+                        <li>Arts and crafts activities</li>
+                        <li>Educational and recreational games</li>
+                        <li>Music and dance</li>
+                        <li>Trips and outings</li>
+                        <li>Adapted sports activities</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-book-reader' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Educational Programs</h3>
+                    <ul>
+                        <li>Teaching basic academic skills</li>
+                        <li>Interactive learning programs</li>
+                        <li>Use of educational technology</li>
+                        <li>Literacy programs</li>
+                        <li>Life skills development</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-wrench' style="font-size: 3rem; color: var(--success-color);"></i>
+                    </div>
+                    <h3>Vocational Training</h3>
+                    <ul>
+                        <li>Assessment of vocational abilities</li>
+                        <li>Work skills training</li>
+                        <li>Sheltered workshop programs</li>
+                        <li>Community work rehabilitation</li>
+                        <li>Post-employment follow-up</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Programs Section -->
+        <div>
+            <h2 class="section-title">Our Special Programs</h2>
+            
+            <div class="content-grid">
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-calendar-star' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Intensive Rehabilitation Program</h3>
+                    <p>
+                        A comprehensive 6-month program that includes all rehabilitation and treatment services 
+                        with intensive individual follow-up for each beneficiary to ensure the best results.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-sun' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Summer Camp</h3>
+                    <p>
+                        A two-month summer camp that includes various recreational, educational, and therapeutic 
+                        activities in a stimulating and fun environment that enhances the comprehensive development of participants.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-home-smile' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Home Services Program</h3>
+                    <p>
+                        Rehabilitation and treatment services at home for cases that cannot reach the center, 
+                        with family training on how to continue the program.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-group' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Family Support Program</h3>
+                    <p>
+                        A comprehensive program to support and train families of people with disabilities that includes 
+                        counseling sessions, training workshops, and psychological support groups.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-megaphone' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Community Awareness Program</h3>
+                    <p>
+                        Community awareness campaigns in schools, universities, and institutions to raise awareness 
+                        about the rights of people with disabilities and the importance of integrating them into society.
+                    </p>
+                </div>
+
+                <div class="content-card">
+                    <div style="text-align: center; margin-bottom: 1.5rem;">
+                        <i class='bx bx-heart-circle' style="font-size: 3rem; color: var(--accent-color);"></i>
+                    </div>
+                    <h3>Volunteer Program</h3>
+                    <p>
+                        A program to train and qualify volunteers to participate in providing services and activities, 
+                        which enhances community partnership in serving this group.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
+    <script>
+        // Loading screen
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+        });
+    </script>
+</body>
+
+</html>

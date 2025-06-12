@@ -1,71 +1,366 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Khaled Charitable Society for Severe Disability</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Khaled Charitable Society for Severe Disabilities</title>
+    <meta name="description" content="Khaled Charitable Society for Severe Disabilities - A non-profit organization providing rehabilitation and care services for people with moderate and severe disabilities">
+    <meta name="keywords" content="charity, severe disabilities, rehabilitation, care, Palestine, Ramallah">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="proj.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>   
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- Preload -->
+    <link rel="preload" href="proj.css" as="style">
+    <link rel="preload" href="app.js" as="script">
 </head>
 
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
-        <a href="HomeEng.html" class="logo">Khaled Charitable Society </a>
-        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
+        <a href="HomeEng.html" class="logo">Khaled Charitable Society</a>
+
         <nav class="navbar">
             <a href="HomeEng.html" class="active">Home</a>
             <a href="AboutusEng.html">About Us</a>
-            <a href="ourgoalsEng.html">Services </a>
-            <a href="ManagementTeamEng.html">Managment Team</a>
-            <a href="contactusEng.html" >Contact Us</a>
-            <div class="dropdown" dir="ltr">
-              <button class="dropbtn">EN/AR</button>
-              <div class="dropdown-content">
-                  <a href="HomeEng.html">English</a>
-                  <a href="index.html">العربية</a>
-              </div>
-          </div>
-        </nav>
-       
-      </header>
+            <a href="ourgoalsEng.html">Goals & Services</a>
+            <a href="ManagementTeamEng.html">Management Team</a>
+            <a href="contactusEng.html">Contact Us</a>
 
-      <section class="home" dir="ltr">
-        <div class="home-content1">
-          <h1>Khaled Charitable Society for Severe Disability</h1>
-          <p>Khaled Charitable Society for Severe 
-            Disabilities (KCS) is a non-profit civil 
-            society concerned with persons with 
-            moderate and sever disabilities for ages 
-            16 years and above, and strive to provide 
-            rehabilitation, entertainment, and 
-            integration services, and enable them to 
-            obtain their full rights, as this category 
-            of disability is completely marginalized 
-            and there are no institutions that provide 
-            them with the required services and 
-            care.
-             Khaled Charitable Society was 
-            established on 2022/8/12 in Ramallah 
-            Governorate.
-             Registration No. RA-22220018-C</p>
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class='bx bx-globe'></i> Language
+                </button>
+                <div class="dropdown-content">
+                    <a href="HomeEng.html">English</a>
+                    <a href="index.html">العربية</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <h1>Khaled Society for Severe Disabilities</h1>
+            <p>
+                Khaled Charitable Society is a non-profit civil society organization that focuses on 
+                people with moderate and severe disabilities aged 16 years and above. We work to provide 
+                rehabilitation, care, entertainment, and integration services, enabling them to obtain 
+                their full rights, as this category of disability is completely marginalized.
+            </p>
+
             <div class="btn-box">
-              <a href="AboutusEng.html">About us</a>
-              <a href="contactusEng.html">Contact us</a>
-              
+                <a href="AboutusEng.html">
+                    <i class='bx bx-info-circle'></i>
+                    Learn More
+                </a>
+                <a href="contactusEng.html">
+                    <i class='bx bx-phone'></i>
+                    Contact Us
+                </a>
             </div>
         </div>
-        <div class="home-sci1">
-          <a href="https://www.facebook.com/KCSSDisability"><i class='bx bxl-facebook'></i></a>
-          <a href="https://www.google.com/maps/dir//31.9035765,35.1923324/@31.9038276,35.192327,20z/data=!4m2!4m1!3e0?entry=ttu"><i class='bx bx-current-location' ></i></a>
-          <a href="https://www.instagram.com/khaled.cssd?igsh=bXl0YW02MmpucGxu"><i class='bx bxl-instagram'></i></a>
+
+        <div class="home-sci">
+            <a href="https://www.facebook.com/KCSSDisability" target="_blank" aria-label="Facebook">
+                <i class='bx bxl-facebook'></i>
+            </a>
+            <a href="https://www.instagram.com/khaled.cssd" target="_blank" aria-label="Instagram">
+                <i class='bx bxl-instagram'></i>
+            </a>
+            <a href="https://www.google.com/maps/dir//31.9035765,35.1923324" target="_blank" aria-label="Location">
+                <i class='bx bx-map'></i>
+            </a>
         </div>
-        <script>
-          // JavaScript for toggle button
-          document.querySelector('.toggle-btn').addEventListener('click', function() {
-              document.querySelector('.navbar').classList.toggle('active');
-          });
-      </script>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section" id="stats">
+        <h2 class="section-title">Our Achievements</h2>
         
-      </section>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-group'></i>
+                </div>
+                <div class="stat-number" data-target="500">0</div>
+                <div class="stat-label">Beneficiaries</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-calendar'></i>
+                </div>
+                <div class="stat-number" data-target="2">0</div>
+                <div class="stat-label">Years of Giving</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-award'></i>
+                </div>
+                <div class="stat-number" data-target="50">0</div>
+                <div class="stat-label">Rehabilitation Programs</div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-heart'></i>
+                </div>
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-label">Volunteers</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission-section" id="mission">
+        <div class="mission-content">
+            <div class="mission-text">
+                <h2>Our Mission</h2>
+                <p>
+                    Providing comprehensive and distinguished services for people with moderate and severe 
+                    disabilities, enabling them to obtain their full rights in rehabilitation, care, and 
+                    integration into society through specialized programs that take into account their 
+                    special needs and respect their human dignity.
+                </p>
+                
+                <div class="mission-features">
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Individual & Group Rehabilitation Programs</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Physical & Occupational Therapy</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Recreational & Cultural Activities</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Vocational Training Programs</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Psychological & Social Support</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Family Counseling & Training</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Community Awareness</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-check-circle'></i>
+                        <span>Community Integration Programs</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-image">
+                <div class="image-placeholder">
+                    <i class='bx bx-heart'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="stats-section" id="services">
+        <h2 class="section-title">Our Services</h2>
+        
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-user-check'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Individual Rehabilitation</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Customized rehabilitation programs for each case according to their special needs
+                </p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-group'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Group Activities</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Recreational and educational group activities to enhance social interaction
+                </p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-home-heart'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Family Support</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Training and guidance for families to deal with their children's needs
+                </p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-brain'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Cognitive Development</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Programs to develop cognitive, motor, and social skills
+                </p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-health'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Healthcare</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Comprehensive health monitoring in cooperation with specialists
+                </p>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class='bx bx-bulb'></i>
+                </div>
+                <h3 style="color: var(--text-primary); margin: 1rem 0;">Awareness</h3>
+                <p style="color: var(--text-secondary); font-size: 1rem;">
+                    Community awareness campaigns to support the rights of people with disabilities
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="mission-section" id="contact">
+        <div class="mission-content">
+            <div class="mission-text">
+                <h2>Contact Us</h2>
+                <p>
+                    We are here to serve you and we are happy to hear from you to inquire about our services 
+                    or to volunteer with us in our journey to serve people with moderate and severe disabilities.
+                </p>
+                
+                <div class="mission-features">
+                    <div class="feature">
+                        <i class='bx bx-map'></i>
+                        <span>Ramallah - Ramallah and Al-Bireh Governorate - Palestine</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-phone'></i>
+                        <span>+970 123 456 789</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-phone'></i>
+                        <span>+970 987 654 321</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-envelope'></i>
+                        <span>info@khaledcharity.org</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-envelope'></i>
+                        <span>contact@khaledcharity.org</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-time'></i>
+                        <span>Sunday - Thursday: 8:00 AM - 4:00 PM</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-time'></i>
+                        <span>Saturday: 9:00 AM - 1:00 PM</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-id-card'></i>
+                        <span>Registration No: RA-22220018-C</span>
+                    </div>
+                    <div class="feature">
+                        <i class='bx bx-calendar-event'></i>
+                        <span>Established: December 8, 2022</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mission-image">
+                <div class="image-placeholder">
+                    <i class='bx bx-phone'></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
+    <script>
+        // Enhanced counter animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalNumber = parseInt(target.getAttribute('data-target'));
+                        
+                        let current = 0;
+                        const increment = finalNumber / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            target.textContent = Math.floor(current);
+                            
+                            if (current >= finalNumber) {
+                                target.textContent = finalNumber;
+                                clearInterval(timer);
+                            }
+                        }, 40);
+                        
+                        counterObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+            
+            // Loading screen
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
+        });
+    </script>
 </body>
+
+</html>

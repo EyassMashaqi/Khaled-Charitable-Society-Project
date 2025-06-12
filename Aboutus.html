@@ -1,133 +1,245 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="ar" dir="rtl">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Khaled Charitable Society for Severe Disability</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>من نحن - جمعية خالد الخيرية للإعاقة الشديدة</title>
+    <meta name="description" content="تعرف على جمعية خالد الخيرية للإعاقة الشديدة - رؤيتنا، رسالتنا، أهدافنا وقيمنا في خدمة الأشخاص ذوي الإعاقة المتوسطة والشديدة">
+    
+    <!-- Stylesheets -->
     <link rel="stylesheet" href="proj.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <style>
-        body {
-            font-family: 'Arial', sans-serif;
-        }
-        .header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        .container {
-            margin-top: 50px;
-        }
-
-        .about {
-            height: auto;
-            padding: 50px 10%;
-        }
-
-        .about-text {
-            font-size: medium;
-        }
-
-        .services {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .service-box {
-            background: #fff;
-            color: #081b29;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-
-        .card-title {
-            margin-bottom: 20px;
-            font-size: 24px;
-            color: #081b29;
-        }
-
-        .list-unstyled li {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-
-        .glyphicon {
-            color: #00abf0;
-            margin-right: 10px;
-        }
-    </style>
 </head>
+
 <body>
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="loading-spinner">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
     <header class="header">
-        <a href="index.html" class="logo">Khaled Charitable Society</a>
-        <button class="toggle-btn" aria-label="Toggle navigation">&#9776;</button>
-        <nav class="navbar" dir="rtl">
-            <a href="index.html">الصفحة الرئيسية</a>
-            <a href="Aboutus.html" class="active">من نحن</a>
-            <a href="ourGoals.html">الخدمات و الأهداف</a>
-            <a href="AdministrativeBoard.html">الهيئة الأدارية</a>
-            <a href="contactus.html">طرق التواصل</a>
-            <a href="advertisements.html"> الإعلانات</a>
+        <a href="index.html" class="logo arabic-text">جمعية خالد الخيرية</a>
+
+        <nav class="navbar">
+            <a href="index.html" class="arabic-text">الرئيسية</a>
+            <a href="Aboutus.html" class="active arabic-text">من نحن</a>
+            <a href="ourGoals.html" class="arabic-text">الأهداف والخدمات</a>
+            <a href="AdministrativeBoard.html" class="arabic-text">الهيئة الإدارية</a>
+            <a href="contactus.html" class="arabic-text">تواصل معنا</a>
+            <a href="advertisements.html" class="arabic-text">الإعلانات</a>
+
+            <div class="dropdown">
+                <button class="dropbtn arabic-text">
+                    <i class='bx bx-globe'></i> اللغة
+                </button>
+                <div class="dropdown-content">
+                    <a href="Aboutus.html" class="arabic-text">العربية</a>
+                    <a href="AboutusEng.html">English</a>
+                </div>
+            </div>
         </nav>
+
+        <div class="toggle-btn">
+            <i class='bx bx-menu'></i>
+        </div>
     </header>
-    <section class="about" dir="rtl">
-        <div class="container">
-            <div class="services">
-                <div class="service-box">
-                    <h3 class="card-title">من نحن</h3>
-                    <p class="about-text">جمعية خالد الخيرية هي جمعية أهلية غير
-                        ربحية تعنى بالأشخاص ذوي الإعاقة
-                        المتوسطة والشديدة لعمر 16 سنة فما
-                        فوق، وتعمل على تقديم خدمات التأهيل
-                        والرعاية والترفيه والدمج وتمكنهم من
-                        الحصول على حقوقهم كاملة حيث أن
-                        هذه الفئة من الإعاقة مهمشة بشكل
-                        كامل ولا توجد مؤسسات تقدم لهم
-                        الخدمات والرعاية المطلوبة.
-                        تأسست الجمعية بتاريخ 2022-12-8 في
-                        محافظة رام الله والبيرة تحت رقم
-                        RA-22220018-C</p>
-                        <h3 class="card-title">الفئة المستهدفة</h3>
-                        <p class="about-text">تقدم الجمعية خدماتها للأشخاص ذوي الإعاقة الشديدة لأعمار 16 سنة فما فوق.</p>
-                        <h3 class="card-title">الرؤية</h3>
-                        <p class="about-text">العمل على تقديم خدمة على مستوى عالٍ وتأهيل ودمج الأشخاص ذوي الإعاقة الشديدة في فلسطين وتمكينهم من التمتع بحياة كريمة.</p>
+
+    <!-- Main Content -->
+    <section class="content-section">
+        <div class="content-header">
+            <h1 class="arabic-text">من نحن</h1>
+            <p class="arabic-text">
+                تعرف على جمعية خالد الخيرية للإعاقة الشديدة ورحلتنا في خدمة المجتمع
+            </p>
+        </div>
+
+        <!-- About Cards -->
+        <div class="content-grid">
+            <!-- Vision Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-low-vision' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">رؤيتنا</h3>
+                <p class="arabic-text">
+                    أن نكون الجمعية الرائدة في تقديم خدمات التأهيل والرعاية للأشخاص ذوي الإعاقة 
+                    المتوسطة والشديدة في فلسطين، وأن نساهم في بناء مجتمع شامل يحترم حقوق جميع 
+                    أفراده ويمكنهم من المشاركة الفعّالة في الحياة الاجتماعية والاقتصادية.
+                </p>
+            </div>
+
+            <!-- Mission Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-target-lock' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">رسالتنا</h3>
+                <p class="arabic-text">
+                    تقديم خدمات شاملة ومتميزة للأشخاص ذوي الإعاقة المتوسطة والشديدة، وتمكينهم 
+                    من الحصول على حقوقهم كاملة في التأهيل والرعاية والدمج في المجتمع، وذلك من 
+                    خلال برامج متخصصة تراعي احتياجاتهم الخاصة وتحترم كرامتهم الإنسانية.
+                </p>
+            </div>
+
+            <!-- Values Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-heart' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">قيمنا</h3>
+                <ul class="arabic-text">
+                    <li>الكرامة الإنسانية واحترام الحقوق</li>
+                    <li>الشمولية والعدالة في تقديم الخدمات</li>
+                    <li>الشفافية والمساءلة في العمل</li>
+                    <li>التميز والابتكار في البرامج</li>
+                    <li>الشراكة المجتمعية والتعاون</li>
+                    <li>التطوير المستمر والتعلم</li>
+                </ul>
+            </div>
+
+            <!-- History Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-time-five' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">تاريخنا</h3>
+                <p class="arabic-text">
+                    تأسست جمعية خالد الخيرية للإعاقة الشديدة في 8 ديسمبر 2022 في محافظة رام الله 
+                    والبيرة، برقم تسجيل RA-22220018-C. جاءت فكرة تأسيس الجمعية نتيجة الحاجة 
+                    الماسة لخدمات متخصصة للأشخاص ذوي الإعاقة المتوسطة والشديدة الذين يفتقرون 
+                    إلى الخدمات المناسبة في المجتمع الفلسطيني.
+                </p>
+            </div>
+
+            <!-- Team Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-group' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">فريق العمل</h3>
+                <p class="arabic-text">
+                    نضم فريقاً من المتخصصين المؤهلين في مجالات التأهيل، والعلاج الطبيعي، 
+                    والعلاج الوظيفي، وعلم النفس، والعمل الاجتماعي. كما نعتمد على شبكة من 
+                    المتطوعين المدربين الذين يساهمون في تقديم الخدمات وتنفيذ البرامج والأنشطة.
+                </p>
+            </div>
+
+            <!-- Services Overview Card -->
+            <div class="content-card">
+                <div style="text-align: center; margin-bottom: 1.5rem;">
+                    <i class='bx bx-cog' style="font-size: 3rem; color: var(--primary-color);"></i>
+                </div>
+                <h3 class="arabic-text">خدماتنا الأساسية</h3>
+                <ul class="arabic-text">
+                    <li>برامج التأهيل الفردي والجماعي</li>
+                    <li>العلاج الطبيعي والوظيفي</li>
+                    <li>الأنشطة الترفيهية والثقافية</li>
+                    <li>برامج التدريب المهني</li>
+                    <li>الدعم النفسي والاجتماعي</li>
+                    <li>إرشاد وتدريب الأسر</li>
+                    <li>التوعية المجتمعية</li>
+                    <li>برامج الدمج المجتمعي</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Statistics Section -->
+        <div style="margin-top: 4rem;">
+            <h2 class="section-title arabic-text">إنجازاتنا في أرقام</h2>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-group'></i>
                     </div>
-                    <div class="service-box">
-                        <h3 class="card-title">الرسالة</h3>
-                        <p class="about-text">تقدم جمعية خالد الخيرية الرعاية الشاملة
-                            وخدمات التأهيل والترفيه والدمج للأشخاص
-                            ذوي الإعاقة في بيئة حاضنة وداعمة تعمل
-                            على تغيير حياتهم من خلال تطوير قدراتهم
-                            وتعزيز استقلاليتهم وتحسين نوعية حياتهم
-                            وتعزيز اندماجهم في المجتمع حيث تهدف
-                            لتمكين الأفراد ذوي الإعاقة من خلال حلول
-                            مبتكرة ومستدامة تلبي احتياجاتهم الفريدة
-                            ونؤثر على حياتهم بشكل إيجابي.</p>
-                        </div>
-                    <div class="service-box">
-                            <h3 class="card-title">الاحتياجات</h3>
-                            <ul class="list-unstyled">
-                                <li><i class="glyphicon glyphicon-ok"></i> تجهيزات ومعدات غرفة علاج الطبيعي</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز قاعة الأنشطة</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز غرفة الحسية</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> تجهيز غرفة العلاج الوظيفي</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> تكاليف غذاء ودواء</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> تجهيزات أحدثية</li>
-                                <li><i class="glyphicon glyphicon-ok"></i> كفالات</li>
-                            </ul>
-                        </div>
+                    <div class="stat-number" data-target="500">0</div>
+                    <div class="stat-label arabic-text">مستفيد</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-calendar'></i>
+                    </div>
+                    <div class="stat-number" data-target="2">0</div>
+                    <div class="stat-label arabic-text">سنوات من العطاء</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-award'></i>
+                    </div>
+                    <div class="stat-number" data-target="50">0</div>
+                    <div class="stat-label arabic-text">برنامج تأهيل</div>
+                </div>
+                
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class='bx bx-heart'></i>
+                    </div>
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label arabic-text">متطوع</div>
+                </div>
             </div>
         </div>
     </section>
 
+    <!-- Scroll to Top Button -->
+    <button class="scroll-to-top" id="scrollToTop" aria-label="العودة إلى الأعلى">
+        <i class='bx bx-up-arrow-alt'></i>
+    </button>
+
+    <!-- JavaScript -->
+    <script src="app.js"></script>
+    
     <script>
-        // JavaScript for toggle button
-        document.querySelector('.toggle-btn').addEventListener('click', function() {
-            document.querySelector('.navbar').classList.toggle('active');
+        // Enhanced counter animation
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.5,
+                rootMargin: '0px 0px -100px 0px'
+            };
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = entry.target;
+                        const finalNumber = parseInt(target.getAttribute('data-target'));
+                        
+                        let current = 0;
+                        const increment = finalNumber / 50;
+                        const timer = setInterval(() => {
+                            current += increment;
+                            target.textContent = Math.floor(current);
+                            
+                            if (current >= finalNumber) {
+                                target.textContent = finalNumber;
+                                clearInterval(timer);
+                            }
+                        }, 40);
+                        
+                        counterObserver.unobserve(target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.stat-number').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+            
+            // Loading screen
+            setTimeout(() => {
+                const loadingSpinner = document.getElementById('loading-spinner');
+                if (loadingSpinner) {
+                    loadingSpinner.style.opacity = '0';
+                    setTimeout(() => {
+                        loadingSpinner.style.display = 'none';
+                    }, 500);
+                }
+            }, 1500);
         });
     </script>
 </body>
+
 </html>
