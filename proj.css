@@ -506,6 +506,7 @@ body {
     overflow: hidden;
 }
 
+/* Enhanced background pattern */
 .home::before {
     content: '';
     position: absolute;
@@ -513,7 +514,26 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>') repeat;
+    background: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.1) 0%, transparent 10%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="dots" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23dots)"/></svg>') repeat;
+    z-index: 1;
+    animation: patternMove 30s linear infinite;
+}
+
+/* Floating decorative elements */
+.home::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    transform: translate(50%, -50%);
+    animation: float 6s ease-in-out infinite;
     z-index: 1;
 }
 
@@ -521,6 +541,7 @@ body {
     max-width: 600px;
     z-index: 2;
     position: relative;
+    animation: fadeInUp 1s ease-out;
 }
 
 .home-content h1 {
@@ -530,6 +551,18 @@ body {
     color: white;
     margin-bottom: 1.5rem;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.home-content h1::after {
+    content: '';
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), transparent);
+    border-radius: 2px;
 }
 
 .home-content p {
@@ -538,6 +571,9 @@ body {
     color: rgba(255, 255, 255, 0.9);
     margin-bottom: 2.5rem;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    position: relative;
+    padding-left: 1rem;
+    border-left: 3px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-box {
@@ -559,6 +595,23 @@ body {
     transition: var(--transition);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-box a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.btn-box a:hover::before {
+    left: 100%;
 }
 
 .btn-box a:hover {
@@ -590,15 +643,139 @@ body {
     transition: var(--transition);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.home-sci a::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.2) 0%, transparent 70%);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+.home-sci a:hover::before {
+    opacity: 1;
 }
 
 .home-sci a:hover {
     background: rgba(255, 255, 255, 0.2);
-    transform: translateY(-2px);
+    transform: translateY(-2px) scale(1.1);
 }
 
 .home-sci a i {
     font-size: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% { transform: translate(50%, -50%) translateY(0); }
+    50% { transform: translate(50%, -50%) translateY(-20px); }
+}
+
+@keyframes patternMove {
+    0% { background-position: 0 0; }
+    100% { background-position: 100px 100px; }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Welcome Message */
+.welcome-message {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    border-radius: var(--border-radius);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out forwards;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.welcome-message i {
+    font-size: 1.5rem;
+    color: var(--primary-color);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home {
+        padding: 8rem 5% 2rem;
+        text-align: center;
+    }
+
+    .home-content {
+        margin: 0 auto;
+    }
+
+    .home-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .home-content h1::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .home-content p {
+        font-size: 1.1rem;
+        padding-left: 0;
+        border-left: none;
+        text-align: center;
+    }
+
+    .btn-box {
+        justify-content: center;
+    }
+
+    .home-sci {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 2rem;
+    }
+
+    .welcome-message {
+        right: 50%;
+        transform: translateX(50%);
+        width: 90%;
+        max-width: 400px;
+    }
 }
 
 /* 📊 STATS & MISSION SECTIONS */

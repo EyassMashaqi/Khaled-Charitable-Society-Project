@@ -16,6 +16,7 @@ class SpectacularWebsiteEnhancer {
         this.setupParallaxEffects();
         this.setupSoundEffects();
         this.setupNavigationMagic();
+        this.setupHomeEnhancements();
     }
 
     // 🌌 ADVANCED 3D PARTICLE SYSTEM
@@ -519,11 +520,63 @@ class SpectacularWebsiteEnhancer {
         t -= 2;
         return -c / 2 * (t * t * t * t - 2) + b;
     }
+
+    // 🏠 HOME SECTION ENHANCEMENTS
+    setupHomeEnhancements() {
+        // Welcome message auto-hide
+        const welcomeMessage = document.querySelector('.welcome-message');
+        if (welcomeMessage) {
+            setTimeout(() => {
+                welcomeMessage.style.opacity = '0';
+                welcomeMessage.style.transform = 'translateX(50px)';
+                setTimeout(() => {
+                    welcomeMessage.style.display = 'none';
+                }, 500);
+            }, 5000);
+        }
+
+        // Parallax effect for decorative elements
+        const home = document.querySelector('.home');
+        if (home) {
+            window.addEventListener('mousemove', (e) => {
+                const mouseX = e.clientX / window.innerWidth;
+                const mouseY = e.clientY / window.innerHeight;
+                
+                const decorElement = home.querySelector('.home::after');
+                if (decorElement) {
+                    decorElement.style.transform = `translate(${50 + mouseX * 10}%, ${-50 + mouseY * 10}%)`;
+                }
+            });
+        }
+
+        // Enhanced button hover effects
+        document.querySelectorAll('.btn-box a').forEach(button => {
+            button.addEventListener('mousemove', (e) => {
+                const rect = button.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                button.style.setProperty('--mouse-x', `${x}px`);
+                button.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Social media icons pulse effect
+        document.querySelectorAll('.home-sci a').forEach(icon => {
+            icon.addEventListener('mouseover', () => {
+                icon.style.transform = 'translateY(-5px) scale(1.1)';
+                setTimeout(() => {
+                    icon.style.transform = 'translateY(-2px) scale(1.1)';
+                }, 200);
+            });
+        });
+    }
 }
 
 // 🚀 INITIALIZE THE SPECTACULAR EXPERIENCE
 document.addEventListener('DOMContentLoaded', () => {
-    new SpectacularWebsiteEnhancer();
+    const enhancer = new SpectacularWebsiteEnhancer();
+    enhancer.init();
     
     // Add loading screen removal
     const loadingSpinner = document.getElementById('loading-spinner');
