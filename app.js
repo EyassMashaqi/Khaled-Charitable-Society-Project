@@ -512,7 +512,10 @@ class SpectacularWebsiteEnhancer {
                     // Close other dropdowns
                     dropdowns.forEach(otherDropdown => {
                         if (otherDropdown !== dropdown) {
-                            otherDropdown.querySelector('.dropdown-content').classList.remove('show');
+                            const otherContent = otherDropdown.querySelector('.dropdown-content');
+                            if (otherContent) {
+                                otherContent.classList.remove('show');
+                            }
                         }
                     });
                     
@@ -522,10 +525,15 @@ class SpectacularWebsiteEnhancer {
             }
         });
         
-        // Close mobile menu when clicking on nav links
+        // Close mobile menu when clicking on nav links (including dropdown links)
         const navLinks = navbar.querySelectorAll('a:not(.dropbtn)');
         navLinks.forEach(link => {
-            link.addEventListener('click', () => {
+            link.addEventListener('click', (e) => {
+                // Allow normal navigation for dropdown links
+                if (link.closest('.dropdown-content')) {
+                    // Don't prevent default for dropdown links - let them navigate
+                }
+                
                 if (navbar.classList.contains('active')) {
                     navbar.classList.remove('active');
                     toggleBtn.setAttribute('aria-expanded', 'false');
@@ -539,6 +547,14 @@ class SpectacularWebsiteEnhancer {
                     
                     // Restore body scroll
                     document.body.style.overflow = '';
+                    
+                    // Close any open dropdowns
+                    dropdowns.forEach(dropdown => {
+                        const dropdownContent = dropdown.querySelector('.dropdown-content');
+                        if (dropdownContent) {
+                            dropdownContent.classList.remove('show');
+                        }
+                    });
                 }
             });
         });
@@ -566,7 +582,7 @@ class SpectacularWebsiteEnhancer {
             // Close dropdowns
             dropdowns.forEach(dropdown => {
                 const dropdownContent = dropdown.querySelector('.dropdown-content');
-                if (!dropdown.contains(e.target)) {
+                if (dropdownContent && !dropdown.contains(e.target)) {
                     dropdownContent.classList.remove('show');
                 }
             });
