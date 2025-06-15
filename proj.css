@@ -1055,8 +1055,9 @@ body {
     color: var(--primary-color);
 }
 
-.dropdown:hover .dropdown-content {
-    display: block;
+.dropdown:hover .dropdown-content,
+.dropdown-content.show {
+    display: block !important;
 }
 
 .toggle-btn {
@@ -3033,6 +3034,15 @@ body {
     /* Remove hover-based dropdown on mobile */
     .dropdown:hover .dropdown-content {
         display: none !important;
+    }
+    
+    /* Ensure .show class works on mobile */
+    .dropdown-content.show {
+        display: block !important;
+        opacity: 1 !important;
+        max-height: 200px !important;
+        transform: translateY(0) !important;
+        visibility: visible !important;
     }
 
     .toggle-btn {

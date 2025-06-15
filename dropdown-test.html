@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Test</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .header {
+            background: #1565c0;
+            padding: 1rem;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+        }
+        
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        
+        .logo {
+            color: white;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+        
+        .nav-items {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropbtn {
+            background: #2196f3;
+            color: white;
+            border: none;
+            padding: 0.8rem 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
+            border-radius: 5px;
+            top: 100%;
+            right: 0;
+            z-index: 1001;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            border-radius: 5px;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f1f1f1;
+        }
+        
+        .dropdown-content.show {
+            display: block !important;
+        }
+        
+        .toggle-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+        
+        .test-content {
+            margin-top: 100px;
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .test-button {
+            background: #1565c0;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        
+        @media (max-width: 768px) {
+            .nav-items {
+                position: fixed;
+                top: 70px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 70px);
+                background: #1565c0;
+                flex-direction: column;
+                align-items: center;
+                padding: 2rem 1rem;
+                transition: 0.3s ease;
+                z-index: 999;
+            }
+            
+            .nav-items.active {
+                left: 0;
+            }
+            
+            .toggle-btn {
+                display: block;
+            }
+            
+            .dropdown {
+                width: 100%;
+            }
+            
+            .dropbtn {
+                width: 100%;
+                justify-content: center;
+                padding: 1rem 2rem;
+                background: #2196f3;
+                border: 1px solid rgba(255,255,255,0.2);
+            }
+            
+            .dropdown-content {
+                position: static;
+                width: 100%;
+                box-shadow: none;
+                border: none;
+                margin-top: 0.5rem;
+                background: transparent;
+            }
+            
+            .dropdown-content a {
+                background: rgba(255,255,255,0.1);
+                color: white;
+                margin: 0.25rem 0;
+                border-radius: 5px;
+            }
+            
+            .dropdown-content a:hover {
+                background: rgba(255,255,255,0.2);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <a href="index.html" class="logo">جمعية خالد الخيرية</a>
+            
+            <button class="toggle-btn" onclick="toggleMobileMenu()">
+                <i class='bx bx-menu'></i>
+            </button>
+            
+            <div class="nav-items" id="navItems">
+                <div class="dropdown">
+                    <button class="dropbtn" onclick="toggleDropdown()">
+                        <i class='bx bx-globe'></i> اللغة
+                    </button>
+                    <div class="dropdown-content" id="dropdownContent">
+                        <a href="index.html">العربية</a>
+                        <a href="HomeEng.html">English</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="test-content">
+        <h1>Dropdown Test Page</h1>
+        <p>Click the hamburger menu (☰) and then click "اللغة" to test the dropdown.</p>
+        <button class="test-button" onclick="testDropdown()">Test Dropdown Manually</button>
+        <button class="test-button" onclick="checkElements()">Check Elements</button>
+        <div id="test-results"></div>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const navItems = document.getElementById('navItems');
+            const toggleBtn = document.querySelector('.toggle-btn');
+            const icon = toggleBtn.querySelector('i');
+            
+            navItems.classList.toggle('active');
+            const isActive = navItems.classList.contains('active');
+            
+            icon.className = isActive ? 'bx bx-x' : 'bx bx-menu';
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        }
+        
+        function toggleDropdown() {
+            const dropdownContent = document.getElementById('dropdownContent');
+            dropdownContent.classList.toggle('show');
+            
+            const isOpen = dropdownContent.classList.contains('show');
+            console.log('Dropdown toggled. Is open:', isOpen);
+            
+            // Update test results
+            const results = document.getElementById('test-results');
+            results.innerHTML = `<p>Dropdown is: ${isOpen ? 'OPEN ✅' : 'CLOSED ❌'}</p>`;
+        }
+        
+        function testDropdown() {
+            toggleDropdown();
+        }
+        
+        function checkElements() {
+            const dropbtn = document.querySelector('.dropbtn');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            const results = document.getElementById('test-results');
+            
+            results.innerHTML = `
+                <h3>Element Check:</h3>
+                <p>Dropdown Button: ${dropbtn ? '✅ Found' : '❌ Not Found'}</p>
+                <p>Dropdown Content: ${dropdownContent ? '✅ Found' : '❌ Not Found'}</p>
+                <p>Screen Width: ${window.innerWidth}px</p>
+                <p>Mobile Mode: ${window.innerWidth <= 768 ? '✅ Yes' : '❌ No'}</p>
+                <p>Dropdown Classes: ${dropdownContent ? dropdownContent.className : 'N/A'}</p>
+            `;
+        }
+        
+        // Close dropdown when clicking outside
+        document.addEventListener('click', function(e) {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownContent = document.getElementById('dropdownContent');
+            
+            if (!dropdown.contains(e.target)) {
+                dropdownContent.classList.remove('show');
+            }
+        });
+        
+        // Auto-check on load
+        window.addEventListener('load', checkElements);
+    </script>
+</body>
+</html> 
