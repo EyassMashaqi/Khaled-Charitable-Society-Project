@@ -1,0 +1,822 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الفعاليات والأنشطة - جمعية خالد الخيرية</title>
+    <meta name="description" content="فعاليات وأنشطة جمعية خالد الخيرية للإعاقة الشديدة">
+    
+    <!-- 🎨 MODERN FONTS -->
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@200;300;400;500;700;800;900&display=swap" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!-- 🔗 STYLESHEETS -->
+    <link rel="stylesheet" href="proj.css">
+    
+    <style>
+        /* Enhanced Events Page Styles */
+        .events-hero {
+            background: var(--bg-gradient);
+            color: white;
+            padding: 8rem 5% 4rem;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .events-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23pattern)"/></svg>') repeat;
+            z-index: 1;
+        }
+
+        .events-hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .events-hero h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .events-hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        /* Events Grid */
+        .events-section {
+            padding: 5rem 5%;
+            background: var(--bg-primary);
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .event-card {
+            background: var(--bg-primary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: var(--shadow-medium);
+            border: 1px solid var(--border-color);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-heavy);
+        }
+
+        .event-header {
+            position: relative;
+            height: 280px;
+            overflow: hidden;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+        }
+
+        .event-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+            display: block;
+        }
+
+        .event-card:hover .event-thumbnail {
+            transform: scale(1.1);
+        }
+
+        /* Video thumbnails auto-play on hover */
+        .event-card:hover video.event-thumbnail {
+            opacity: 1;
+        }
+
+        video.event-thumbnail:hover {
+            cursor: pointer;
+        }
+
+        .event-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255, 255, 255, 0.95);
+            color: var(--primary-color);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-play-btn:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            background: white;
+        }
+
+        .event-play-btn i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-right: 5px;
+        }
+
+        .event-body {
+            padding: 2rem;
+        }
+
+        .event-date {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .event-date i {
+            color: var(--primary-color);
+        }
+
+        .event-title {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .event-description {
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-footer {
+            display: flex;
+            gap: 1rem;
+            padding-top: 1.5rem;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .event-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            padding: 0.875rem 1.5rem;
+            border-radius: 12px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .event-btn-primary {
+            background: var(--primary-color);
+            color: white;
+        }
+
+        .event-btn-primary:hover {
+            background: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+
+        .event-btn-secondary {
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+        }
+
+        .event-btn-secondary:hover {
+            background: var(--bg-tertiary);
+            transform: translateY(-2px);
+        }
+
+        /* Gallery Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90%;
+            max-height: 90%;
+            background: var(--bg-primary);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+
+        .modal-close:hover {
+            background: white;
+            transform: rotate(90deg);
+        }
+
+        .modal-close i {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            padding: 2rem;
+            max-height: 80vh;
+            overflow-y: auto;
+        }
+
+        .gallery-item {
+            position: relative;
+            aspect-ratio: 1;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.05);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1rem;
+        }
+
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 1200px;
+            aspect-ratio: 16/9;
+            background: #000;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Stats Section */
+        .events-stats {
+            background: var(--bg-secondary);
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+
+        .stat-item {
+            padding: 2rem;
+            background: var(--bg-primary);
+            border-radius: 16px;
+            box-shadow: var(--shadow-light);
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-label {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+
+        /* Dark Mode Enhancements */
+        [data-theme="dark"] .event-card {
+            background: var(--bg-secondary);
+        }
+
+        [data-theme="dark"] .event-badge {
+            background: rgba(30, 41, 59, 0.95);
+            color: #60a5fa;
+        }
+
+        [data-theme="dark"] .modal-content {
+            background: var(--bg-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .events-hero h1 {
+                font-size: 2rem;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                padding: 0 1rem;
+            }
+
+            .event-header {
+                height: 220px;
+            }
+
+            .event-footer {
+                flex-direction: column;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+                padding: 1rem;
+            }
+
+            .modal-content {
+                max-width: 95%;
+                max-height: 95%;
+            }
+        }
+
+        /* Loading Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .event-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .event-card:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
+        .event-card:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
+        .event-card:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+    </style>
+</head>
+<body>
+    <!-- 🌙 THEME TOGGLE -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">
+        <i class='bx bx-moon'></i>
+    </button>
+
+    <!-- 📊 SCROLL PROGRESS -->
+    <div id="scroll-progress" class="scroll-progress"></div>
+
+    <!-- 🏥 HEADER -->
+    <header class="header">
+        <a href="index.html" class="logo">
+            <i class='bx bx-heart'></i>
+            جمعية خالد الخيرية
+        </a>
+
+        <nav class="navbar" id="navbar">
+            <a href="index.html">الرئيسية</a>
+            <a href="Aboutus.html">من نحن</a>
+            <a href="ourGoals.html">أهدافنا</a>
+            <a href="AdministrativeBoard.html">مجلس الإدارة</a>
+            <a href="advertisements.html">إعلانات</a>
+            <a href="events.html" class="active">الفعاليات</a>
+            <a href="contactus.html">اتصل بنا</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">
+                    <i class='bx bx-globe'></i>
+                    <span>English</span>
+                </button>
+                <div class="dropdown-content">
+                    <a href="HomeEng.html">Home</a>
+                    <a href="AboutusEng.html">About Us</a>
+                    <a href="ourgoalsEng.html">Our Goals</a>
+                    <a href="ManagementTeamEng.html">Management</a>
+                    <a href="advertisementsEng.html">Announcements</a>
+                    <a href="eventsEng.html">Events</a>
+                    <a href="contactusEng.html">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <button class="toggle-btn" id="menu-toggle" aria-label="القائمة">
+            <i class='bx bx-menu'></i>
+        </button>
+    </header>
+
+    <!-- 🎆 HERO SECTION -->
+    <section class="events-hero">
+        <div class="events-hero-content">
+            <h1 class="arabic-text">فعالياتنا وأنشطتنا</h1>
+            <p class="arabic-text">تعرف على الفعاليات والأنشطة التي نظمتها جمعية خالد الخيرية لخدمة المجتمع</p>
+        </div>
+    </section>
+
+    <!-- 📅 EVENTS SECTION -->
+    <section class="events-section">
+        <div class="events-grid">
+            <!-- Event 1: Charity Dinner -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">فعالية خاصة</span>
+                    <div class="event-play-btn" onclick="openVideoModal('حفل العشاء الخيري الأول')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/حفل العشاء الخيري الأول/حفل العشاء الخيري الأول.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>4 فبراير 2025</span>
+                    </div>
+                    <h2 class="event-title arabic-text">حفل العشاء الخيري الأول</h2>
+                    <p class="event-description arabic-text">
+                        من لا يشكر الناس لا يشكر الله. باسم جمعية خالد الخيرية للإعاقة الشديدة ومجلس إدارتها، نتوجه بجزيل الشكر والامتنان لكل من ساهم في نجاح حفل العشاء الخيري الأول، الذي كان خطوة رائعة لدعم ذوي الإعاقة وتعزيز رسالتنا الإنسانية. بكم ومعكم، نحقق المزيد من الإنجازات لخدمة ذوي الإعاقة وتعزيز جودة حياتهم. شكرًا من القلب.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('حفل العشاء الخيري الأول')">
+                            <i class='bx bx-play-circle'></i>
+                            مشاهدة الفيديو
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 2: Foundation Stone Laying -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">حدث تاريخي</span>
+                    <div class="event-play-btn" onclick="openVideoModal('حفل وضع حجر الأساس')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/حفل وضع حجر الأساس/حفل وضع حجر الأساس.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>10 سبتمبر 2025</span>
+                    </div>
+                    <h2 class="event-title arabic-text">حفل وضع حجر الأساس</h2>
+                    <p class="event-description arabic-text">
+                        من القلب، وبكل امتنان، أتقدم بأسمى آيات الشكر والتقدير على حضوركم الجميل، ومشاركتكم الصادقة في حفل وضع حجر الأساس لجمعية خالد الخيرية للإعاقة الشديدة. تواجدكم لم يكن مجرد حضور، بل كان دعماً معنوياً عظيماً، ورسالة محبة وثقة نعتز بها. لكل من قدم يد العون، ولكل من شارك بكلمة أو بدعوة... شكراً من القلب 🙏
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('حفل وضع حجر الأساس')">
+                            <i class='bx bx-play-circle'></i>
+                            مشاهدة الفيديو
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 3: Ministry of Social Development -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">زيارة رسمية</span>
+                    <div class="event-play-btn" onclick="openGallery()">
+                        <i class='bx bx-images'></i>
+                    </div>
+                    <img src="picture/وزارة التنمية الاجتماعية/581401573_17905961823269458_2382905080685019072_n.jpg" 
+                         alt="زيارة وزارة التنمية الاجتماعية" 
+                         class="event-thumbnail">
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>13 نوفمبر 2025</span>
+                    </div>
+                    <h2 class="event-title arabic-text">زيارة وزارة التنمية الاجتماعية</h2>
+                    <p class="event-description arabic-text">
+                        تشرفت جمعية خالد الخيرية للإعاقة الشديدة باستقبال وفد من وزارة التنمية الاجتماعية برئاسة معالي الوزيرة د. سماح حمد، وبمشاركة عطوفة وكيل الوزارة أ. طه إيراني، ومحمد سليم مدير عام الجمعيات، وعجاج عجاج مدير عام الأشخاص ذوي الإعاقة، وعماد عمران مدير عام مديرية التنمية الاجتماعية، وهاني العالول مدير ديوان الوزيرة.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openGallery()">
+                            <i class='bx bx-images'></i>
+                            معرض الصور (10 صور)
+                        </button>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 📊 STATS SECTION -->
+    <section class="events-stats">
+        <h2 class="section-title arabic-text">إنجازاتنا بالأرقام</h2>
+        <div class="stats-grid">
+            <div class="stat-item">
+                <div class="stat-number">3+</div>
+                <div class="stat-label arabic-text">فعاليات كبرى</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">500+</div>
+                <div class="stat-label arabic-text">مشارك</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">100+</div>
+                <div class="stat-label arabic-text">داعم ومتبرع</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-number">50+</div>
+                <div class="stat-label arabic-text">مستفيد مباشر</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 📱 SOCIAL LINKS -->
+    <div class="home-sci">
+        <a href="#" aria-label="Facebook"><i class='bx bxl-facebook'></i></a>
+        <a href="#" aria-label="Instagram"><i class='bx bxl-instagram'></i></a>
+        <a href="#" aria-label="Twitter"><i class='bx bxl-twitter'></i></a>
+        <a href="#" aria-label="LinkedIn"><i class='bx bxl-linkedin'></i></a>
+    </div>
+
+    <!-- 🦶 FOOTER -->
+    <footer class="footer">
+        <p>&copy; 2024 جمعية خالد الخيرية للإعاقة الشديدة. جميع الحقوق محفوظة.</p>
+    </footer>
+
+    <!-- 🎬 VIDEO MODAL -->
+    <div id="videoModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeVideoModal()">
+                <i class='bx bx-x'></i>
+            </button>
+            <div class="video-container">
+                <video id="modalVideo" controls>
+                    <source src="" type="video/mp4">
+                    متصفحك لا يدعم تشغيل الفيديو.
+                </video>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🖼️ GALLERY MODAL -->
+    <div id="galleryModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeGallery()">
+                <i class='bx bx-x'></i>
+            </button>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581401573_17905961823269458_2382905080685019072_n.jpg" alt="صورة 1">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581439256_17905961814269458_5570405500929579697_n.jpg" alt="صورة 2">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581821697_17905961868269458_143117190146779250_n.jpg" alt="صورة 3">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581840861_17905961796269458_3470776589185722417_n.jpg" alt="صورة 4">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581921863_17905961832269458_6311904403033229950_n.jpg" alt="صورة 5">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/581940679_17905961841269458_9174437558181121187_n.jpg" alt="صورة 6">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/582010959_17905961880269458_1075968966694219418_n.jpg" alt="صورة 7">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/582283592_17905961859269458_4368721373456324383_n.jpg" alt="صورة 8">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/582604784_17905961850269458_7395138964259272860_n.jpg" alt="صورة 9">
+                </div>
+                <div class="gallery-item">
+                    <img src="picture/وزارة التنمية الاجتماعية/583689253_17905961805269458_7824446434462587369_n.jpg" alt="صورة 10">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 🎨 SCRIPTS -->
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('theme-toggle');
+        const html = document.documentElement;
+        
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = html.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            html.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            themeToggle.innerHTML = newTheme === 'dark' 
+                ? '<i class="bx bx-sun"></i>' 
+                : '<i class="bx bx-moon"></i>';
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        html.setAttribute('data-theme', savedTheme);
+        themeToggle.innerHTML = savedTheme === 'dark' 
+            ? '<i class="bx bx-sun"></i>' 
+            : '<i class="bx bx-moon"></i>';
+
+        // Scroll Progress
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.getElementById('scroll-progress');
+            const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            scrollProgress.style.width = scrollPercentage + '%';
+        });
+
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const navbar = document.getElementById('navbar');
+
+        menuToggle.addEventListener('click', () => {
+            navbar.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.className = navbar.classList.contains('active') ? 'bx bx-x' : 'bx bx-menu';
+        });
+
+        // Video Modal Functions
+        function openVideoModal(eventName) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const source = video.querySelector('source');
+            
+            let videoPath = '';
+            if (eventName === 'حفل العشاء الخيري الأول') {
+                videoPath = 'picture/حفل العشاء الخيري الأول/حفل العشاء الخيري الأول.mp4';
+            } else if (eventName === 'حفل وضع حجر الأساس') {
+                videoPath = 'picture/حفل وضع حجر الأساس/حفل وضع حجر الأساس.mp4';
+            }
+            
+            source.src = videoPath;
+            video.load();
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Gallery Modal Functions
+        function openGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGallery() {
+            const modal = document.getElementById('galleryModal');
+            modal.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Close modals on click outside
+        window.addEventListener('click', (e) => {
+            const videoModal = document.getElementById('videoModal');
+            const galleryModal = document.getElementById('galleryModal');
+            
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+            if (e.target === galleryModal) {
+                closeGallery();
+            }
+        });
+
+        // Close modals on ESC key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeVideoModal();
+                closeGallery();
+            }
+        });
+
+        // Add ripple effect to buttons
+        document.querySelectorAll('.event-btn').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const ripple = document.createElement('span');
+                ripple.classList.add('ripple');
+                this.appendChild(ripple);
+                
+                const rect = this.getBoundingClientRect();
+                const size = Math.max(rect.width, rect.height);
+                ripple.style.width = ripple.style.height = size + 'px';
+                ripple.style.left = e.clientX - rect.left - size / 2 + 'px';
+                ripple.style.top = e.clientY - rect.top - size / 2 + 'px';
+                
+                setTimeout(() => ripple.remove(), 600);
+            });
+        });
+
+        // Auto-play video thumbnails on hover
+        document.querySelectorAll('video.event-thumbnail').forEach(video => {
+            const card = video.closest('.event-card');
+            
+            card.addEventListener('mouseenter', () => {
+                video.play().catch(e => console.log('Video play failed:', e));
+            });
+            
+            card.addEventListener('mouseleave', () => {
+                video.pause();
+                video.currentTime = 2; // Reset to thumbnail position
+            });
+        });
+    </script>
+</body>
+</html>
