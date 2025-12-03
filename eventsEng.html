@@ -445,6 +445,7 @@
         .event-card:nth-child(1) { animation-delay: 0.1s; opacity: 0; }
         .event-card:nth-child(2) { animation-delay: 0.2s; opacity: 0; }
         .event-card:nth-child(3) { animation-delay: 0.3s; opacity: 0; }
+        .event-card:nth-child(4) { animation-delay: 0.4s; opacity: 0; }
     </style>
 </head>
 <body>
@@ -603,6 +604,39 @@
                     </div>
                 </div>
             </article>
+
+            <!-- Event 4: Building Video -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">A Dream Being Built</span>
+                    <div class="event-play-btn" onclick="openVideoModal('building')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/فيديو البناء/مؤسسة خالد V3-.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>2025</span>
+                    </div>
+                    <h2 class="event-title">A Dream Being Built - Society Building</h2>
+                    <p class="event-description">
+                        The Khaled Charitable Society for Severe Disabilities building represents a national dream we 
+                        are creating together; a humanitarian edifice that embraces hope and embodies inclusion and solidarity. 
+                        Here, people with disabilities will find a safe environment that gives them opportunities for growth 
+                        and a more independent and dignified life, through physical therapy, rehabilitation, psychological and 
+                        social support services, and educational and recreational programs tailored to their needs.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('building')">
+                            <i class='bx bx-play-circle'></i>
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </article>
         </div>
     </section>
 
@@ -611,7 +645,7 @@
         <h2 class="section-title">Our Achievements in Numbers</h2>
         <div class="stats-grid">
             <div class="stat-item">
-                <div class="stat-number">3+</div>
+                <div class="stat-number">4+</div>
                 <div class="stat-label">Major Events</div>
             </div>
             <div class="stat-item">
@@ -749,6 +783,8 @@
                 videoPath = 'picture/حفل العشاء الخيري الأول/حفل العشاء الخيري الأول.mp4';
             } else if (eventType === 'foundation') {
                 videoPath = 'picture/حفل وضع حجر الأساس/حفل وضع حجر الأساس.mp4';
+            } else if (eventType === 'building') {
+                videoPath = 'picture/فيديو البناء/مؤسسة خالد V3-.mp4';
             }
             
             source.src = videoPath;
