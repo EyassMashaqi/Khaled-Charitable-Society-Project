@@ -47,28 +47,9 @@
 }
 
 /* 🌙 THEME TOGGLE BUTTON */
-.theme-toggle {
-    position: fixed;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-    background: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    box-shadow: var(--shadow-medium);
-    transition: var(--transition);
-    z-index: 1000;
-}
 
-.theme-toggle:hover {
-    transform: translateY(-50%) scale(1.1);
-    box-shadow: var(--shadow-heavy);
-}
+
+
 
 /* 🎆 RIPPLE EFFECT */
 .ripple {
@@ -2761,9 +2742,7 @@ body {
     .home-sci,
     .welcome-message,
     .scroll-progress,
-    .theme-toggle {
-        display: none !important;
-    }
+   
 
     .home,
     .stats-section,
@@ -3846,10 +3825,6 @@ body {
     .home-sci,
     .welcome-message,
     .scroll-progress,
-    .theme-toggle {
-        display: none !important;
-    }
-
     .home,
     .stats-section,
     .mission-section,

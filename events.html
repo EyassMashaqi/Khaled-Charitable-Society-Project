@@ -449,11 +449,6 @@
     </style>
 </head>
 <body>
-    <!-- 🌙 THEME TOGGLE -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="تبديل الوضع الليلي">
-        <i class='bx bx-moon'></i>
-    </button>
-
     <!-- 📊 SCROLL PROGRESS -->
     <div id="scroll-progress" class="scroll-progress"></div>
 
@@ -471,6 +466,7 @@
             <a href="AdministrativeBoard.html">مجلس الإدارة</a>
             <a href="advertisements.html">إعلانات</a>
             <a href="events.html" class="active">الفعاليات</a>
+            <a href="reports.html">التقارير والخطط</a>
             <a href="contactus.html">اتصل بنا</a>
             
             <div class="dropdown">
@@ -593,7 +589,65 @@
                 </div>
             </article>
 
-            <!-- Event 4: Building Video -->
+            <!-- Event 4: Building Plan Video -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">مشروع البناء</span>
+                    <div class="event-play-btn" onclick="openVideoModal('مخطط البناء')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/مخطط البناء/فيديو مخطط البناء.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>2025</span>
+                    </div>
+                    <h2 class="event-title arabic-text">مبنى الجمعية المقترح</h2>
+                    <p class="event-description arabic-text">
+                        نستعرض لكم التصميم المعماري المقترح لمبنى جمعية خالد الخيرية، الذي صمم خصيصًا ليلبي احتياجات الأشخاص ذوي الإعاقة المتوسطة والشديدة. يتضمن المبنى قاعات للعلاج الطبيعي والوضيفي، ومراكز للتأهيل، ومساحات للأنشطة الترفيهية، وكل ما يحتاجه مستفيدونا لتحسين جودة حياتهم.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('مخطط البناء')">
+                            <i class='bx bx-play-circle'></i>
+                            مشاهدة الفيديو
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 5: Excavation Works Video -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">أعمال البناء</span>
+                    <div class="event-play-btn" onclick="openVideoModal('فيديو الحفريات')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/الحفريات/اعمال الحفريات.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>2025</span>
+                    </div>
+                    <h2 class="event-title arabic-text">أعمال الحفريات في الموقع</h2>
+                    <p class="event-description arabic-text">
+                        بدأت أعمال الحفريات والتحضير في موقع مبنى جمعية خالد الخيرية، في خطوة أولى نحو تحقيق حلمنا بإنشاء صرح متخصص لخدمة ذوي الإعاقة. يوثق هذا الفيديو مراحل العمل الأولية والتحضيرات للبناء، مما يعكس بداية مشروع إنساني كبير سيشكل فارقًا في حياة العديد من الأفراد وعائلاتهم.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('فيديو الحفريات')">
+                            <i class='bx bx-play-circle'></i>
+                            مشاهدة الفيديو
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 6: Building Video -->
             <article class="event-card">
                 <div class="event-header">
                     <span class="event-badge">حلمًا يُبنى</span>
@@ -719,7 +773,7 @@
     <!-- 🎨 SCRIPTS -->
     <script>
         // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
+        
         const html = document.documentElement;
         
         themeToggle.addEventListener('click', () => {
@@ -767,6 +821,10 @@
                 videoPath = 'picture/حفل العشاء الخيري الأول/حفل العشاء الخيري الأول.mp4';
             } else if (eventName === 'حفل وضع حجر الأساس') {
                 videoPath = 'picture/حفل وضع حجر الأساس/حفل وضع حجر الأساس.mp4';
+            } else if (eventName === 'مخطط البناء') {
+                videoPath = 'picture/مخطط البناء/فيديو مخطط البناء.mp4';
+            } else if (eventName === 'فيديو الحفريات') {
+                videoPath = 'picture/فيديو البناء/مؤسسة خالد.mp4';
             } else if (eventName === 'فيديو البناء') {
                 videoPath = 'picture/فيديو البناء/مؤسسة خالد.mp4';
             }

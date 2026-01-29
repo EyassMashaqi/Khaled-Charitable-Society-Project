@@ -10,7 +10,6 @@ class SpectacularWebsiteEnhancer {
         this.setupAdvancedParticles();
         this.setupMagicCursor();
         this.setupScrollAnimations();
-        this.setupThemeToggle();
         this.setupInteractiveButtons();
         this.setupTextEffects();
         this.setupParallaxEffects();
@@ -216,76 +215,11 @@ class SpectacularWebsiteEnhancer {
         console.log('Sparkle effects disabled for charity organization website');
     }
 
-    // 🎨 THEME TOGGLE SPECTACULAR
+    // Theme is set to light mode only
     setupThemeToggle() {
-        const themeToggle = document.createElement('button');
-        themeToggle.className = 'theme-toggle';
-        themeToggle.innerHTML = '<i class="bx bx-moon"></i>';
-        themeToggle.setAttribute('aria-label', 'Toggle theme');
-        
-        document.body.appendChild(themeToggle);
-        
-        // Load saved theme
-        const savedTheme = localStorage.getItem('theme') || 'dark';
-        document.documentElement.setAttribute('data-theme', savedTheme);
-        this.updateThemeIcon(themeToggle, savedTheme);
-        
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = document.documentElement.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            // Smooth theme transition
-            document.documentElement.style.transition = 'all 0.5s ease';
-            document.documentElement.setAttribute('data-theme', newTheme);
-            localStorage.setItem('theme', newTheme);
-            this.updateThemeIcon(themeToggle, newTheme);
-            
-            // Reset transition
-            setTimeout(() => {
-                document.documentElement.style.transition = '';
-            }, 500);
-            
-            // Theme change effect
-            this.createThemeChangeEffect();
-        });
-    }
-
-    updateThemeIcon(button, theme) {
-        const icon = button.querySelector('i');
-        icon.className = theme === 'dark' ? 'bx bx-sun' : 'bx bx-moon';
-        
-        // Icon animation
-        icon.style.transform = 'rotateY(360deg)';
-        setTimeout(() => {
-            icon.style.transform = '';
-        }, 500);
-    }
-
-    createThemeChangeEffect() {
-        const overlay = document.createElement('div');
-        overlay.style.cssText = `
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: radial-gradient(circle, transparent 0%, rgba(0,0,0,0.8) 100%);
-            z-index: 10000;
-            pointer-events: none;
-            opacity: 0;
-        `;
-        
-        document.body.appendChild(overlay);
-        
-        // Animate overlay
-        overlay.animate([
-            { opacity: 0 },
-            { opacity: 1 },
-            { opacity: 0 }
-        ], {
-            duration: 1000,
-            easing: 'ease-in-out'
-        }).onfinish = () => overlay.remove();
+        // Set theme to light mode permanently
+        document.documentElement.setAttribute('data-theme', 'light');
+        document.body.setAttribute('data-theme', 'light');
     }
 
     // 🔥 INTERACTIVE BUTTONS
@@ -815,29 +749,9 @@ document.head.appendChild(styleSheet);
 // Start visual effects
 addVisualEffects();
 
-// Theme handling
-const themeToggle = document.getElementById('themeToggle');
-const body = document.body;
-const icon = themeToggle.querySelector('i');
-
-// Check for saved theme preference
-const savedTheme = localStorage.getItem('theme') || 'light';
-body.setAttribute('data-theme', savedTheme);
-updateThemeIcon(savedTheme);
-
-themeToggle.addEventListener('click', () => {
-    const currentTheme = body.getAttribute('data-theme');
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    
-    // Apply new theme immediately without transitions
-    body.setAttribute('data-theme', newTheme);
-    localStorage.setItem('theme', newTheme);
-    updateThemeIcon(newTheme);
-});
-
-function updateThemeIcon(theme) {
-    icon.className = theme === 'dark' ? 'bx bx-sun' : 'bx bx-moon';
-}
+// Theme is set to light mode only
+document.documentElement.setAttribute('data-theme', 'light');
+document.body.setAttribute('data-theme', 'light');
 
 // Disable all animations for stats section immediately
 document.addEventListener('DOMContentLoaded', () => {

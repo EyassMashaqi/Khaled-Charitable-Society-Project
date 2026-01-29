@@ -449,11 +449,6 @@
     </style>
 </head>
 <body>
-    <!-- 🌙 THEME TOGGLE -->
-    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
-        <i class='bx bx-moon'></i>
-    </button>
-
     <!-- 📊 SCROLL PROGRESS -->
     <div id="scroll-progress" class="scroll-progress"></div>
 
@@ -471,6 +466,7 @@
             <a href="ManagementTeamEng.html">Management</a>
             <a href="advertisementsEng.html">Announcements</a>
             <a href="eventsEng.html" class="active">Events</a>
+            <a href="reportsEng.html">Reports & Plans</a>
             <a href="contactusEng.html">Contact</a>
             
             <div class="dropdown">
@@ -485,6 +481,7 @@
                     <a href="AdministrativeBoard.html">مجلس الإدارة</a>
                     <a href="advertisements.html">إعلانات</a>
                     <a href="events.html">الفعاليات</a>
+                    <a href="reports.html">التقارير والخطط</a>
                     <a href="contactus.html">اتصل بنا</a>
                 </div>
             </div>
@@ -605,7 +602,65 @@
                 </div>
             </article>
 
-            <!-- Event 4: Building Video -->
+            <!-- Event 4: Building Plan Video -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">Building Project</span>
+                    <div class="event-play-btn" onclick="openVideoModal('building-plan')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/مخطط البناء/kk.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>2025</span>
+                    </div>
+                    <h2 class="event-title">Proposed Society Building</h2>
+                    <p class="event-description">
+                        We present to you the proposed architectural design for Khaled Charitable Society building, which was designed specifically to meet the needs of people with moderate and severe disabilities. The building includes physical and occupational therapy rooms, rehabilitation centers, recreational activity spaces, and everything our beneficiaries need to improve their quality of life.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('building-plan')">
+                            <i class='bx bx-play-circle'></i>
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 5: Excavation Works Video -->
+            <article class="event-card">
+                <div class="event-header">
+                    <span class="event-badge">Construction Works</span>
+                    <div class="event-play-btn" onclick="openVideoModal('excavation')">
+                        <i class='bx bx-play'></i>
+                    </div>
+                    <video class="event-thumbnail" muted loop playsinline onloadedmetadata="this.currentTime = 2">
+                        <source src="picture/الحفريات/اعمال الحفريات.mp4" type="video/mp4">
+                    </video>
+                </div>
+                <div class="event-body">
+                    <div class="event-date">
+                        <i class='bx bx-calendar'></i>
+                        <span>2025</span>
+                    </div>
+                    <h2 class="event-title">Excavation Works at Site</h2>
+                    <p class="event-description">
+                        Excavation and preparation works have begun at the site of Khaled Charitable Society building, in the first step towards realizing our dream of establishing a specialized facility to serve people with disabilities. This video documents the initial work stages and construction preparations, reflecting the beginning of a major humanitarian project that will make a difference in the lives of many individuals and their families.
+                    </p>
+                    <div class="event-footer">
+                        <button class="event-btn event-btn-primary" onclick="openVideoModal('excavation')">
+                            <i class='bx bx-play-circle'></i>
+                            Watch Video
+                        </button>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event 6: Building Video -->
             <article class="event-card">
                 <div class="event-header">
                     <span class="event-badge">A Dream Being Built</span>
@@ -735,7 +790,7 @@
     <!-- 🎨 SCRIPTS -->
     <script>
         // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
+        
         const html = document.documentElement;
         
         themeToggle.addEventListener('click', () => {
@@ -783,6 +838,10 @@
                 videoPath = 'picture/حفل العشاء الخيري الأول/حفل العشاء الخيري الأول.mp4';
             } else if (eventType === 'foundation') {
                 videoPath = 'picture/حفل وضع حجر الأساس/حفل وضع حجر الأساس.mp4';
+            } else if (eventType === 'building-plan') {
+                videoPath = 'picture/مخطط البناء/kk.mp4';
+            } else if (eventType === 'excavation') {
+                videoPath = 'picture/الحفر في الموقع/فيديو الحفر.mp4';
             } else if (eventType === 'building') {
                 videoPath = 'picture/فيديو البناء/مؤسسة خالد.mp4';
             }
